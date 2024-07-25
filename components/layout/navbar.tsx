@@ -7,12 +7,15 @@ import { usePathname } from "next/navigation";
 import { IoClose, IoPersonSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
+import { useTheme } from "next-themes";
 
 
 
 export function Navbar() {
   const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  const { theme } = useTheme();
 
 
   const handleModalClose = () => {
@@ -40,18 +43,18 @@ export function Navbar() {
   ]
 
   return (
-    <div className="font-quicksand">
+    <div className="font-quicksand w-full fixed">
       <div
         className="
           flex justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
-          lg:py-8 items-center relative border-b-[1px] shadow-md 
+          lg:py-8 items-center relative  dropshadow 
         "
       >
         <div className="hidden lg:flex items-center  gap-[13px] font-normal text-[15px] leading-[36px] cursor-pointer">
           {nav.map((nav: any) => (
             <Link
               onClick={() => isActive(nav.href)}
-              key={nav.href}
+              key={nav.name}
               href={nav.href}
               className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
                 ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
@@ -60,6 +63,8 @@ export function Navbar() {
               {nav.name}
             </Link>
           ))}
+
+          {/* <div className="text-lg">The current theme is: {theme}</div> */}
           
         </div>
 
@@ -94,7 +99,7 @@ export function Navbar() {
         <div className="flex flex-col items-start pl-6 pr-9">
           {nav.map((navItem) => (
             <Link
-              key={navItem.href}
+              key={navItem.name}
               href={navItem.href}
               className={`py-2 text-[15px] ${isActive(navItem.href) ? "text-secondary" : "text-primary"}`}
               onClick={() => setIsSliderOpen(false)}

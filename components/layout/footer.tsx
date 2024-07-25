@@ -46,7 +46,7 @@ export function Footer() {
       <div
         className="
           flex flex-col sm:flex-row  justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
-          lg:py-8 sm:items-center relative border-t-[1px] shadow-md 
+          lg:py-8 sm:items-center relative border-t  dropshadow2
         "
       >
             <div className="lg:hidden  flex -ml-4">
@@ -58,7 +58,7 @@ export function Footer() {
                         {nav.map((nav: any) => (
                               <Link
                               onClick={() => isActive(nav.href)}
-                              key={nav.href}
+                              key={nav.name}
                               href={nav.href}
                               className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
                               ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
