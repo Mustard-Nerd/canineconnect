@@ -1,4 +1,4 @@
-
+import localFont from "next/font/local";
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { Navbar } from '@/components/layout';
@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   },
 };
 
+const local = localFont({
+  src: [
+    {
+      path: "/fonts/Benz Grotesk.ttf",
+      weight: "400",
+      style: "normal",
+    },
+
+  ],
+});
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -23,7 +34,7 @@ export const viewport: Viewport = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en"  suppressHydrationWarning>
-      <body>
+      <body className={local.className}>
         <Providers>
           <nav>
             <Navbar />
