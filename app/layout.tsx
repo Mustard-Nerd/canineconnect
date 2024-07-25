@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout";
 import { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
 import { Footer } from "@/components/layout/footer";
+import localFont from "next/font/local";
 
 
 export const metadata: Metadata = {
@@ -14,7 +15,16 @@ export const metadata: Metadata = {
   },
 };
 
+const local = localFont({
+  src: [
+    {
+      path: "/fonts/Benz Grotesk.ttf",
+      weight: "400",
+      style: "normal",
+    },
 
+  ],
+});
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -33,7 +43,7 @@ export default function RootLayout({
   return (
     <SessionProvider session={pageProps?.session}>
       <html>
-        <body>
+        <body className={local.className}>
           <nav>
             <Navbar />
           </nav>
