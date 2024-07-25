@@ -7,12 +7,15 @@ import { usePathname } from "next/navigation";
 import { IoClose, IoPersonSharp } from "react-icons/io5";
 import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
+import { useTheme } from "next-themes";
 
 
 
 export function Navbar() {
   const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
+
+  const { theme } = useTheme();
 
 
   const handleModalClose = () => {
@@ -60,6 +63,8 @@ export function Navbar() {
               {nav.name}
             </Link>
           ))}
+
+          {/* <div className="text-lg">The current theme is: {theme}</div> */}
           
         </div>
 
