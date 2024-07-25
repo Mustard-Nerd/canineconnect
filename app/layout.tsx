@@ -1,8 +1,9 @@
+
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import TProvider from './themeProvider';
 import { Navbar } from '@/components/layout';
 import { Footer } from '@/components/layout/footer';
+import { Providers } from './themeProvider';
 
 export const metadata: Metadata = {
   title: 'Canine-Connect',
@@ -21,19 +22,17 @@ export const viewport: Viewport = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en"  suppressHydrationWarning>
       <body>
-        <TProvider>
-          <div>
-            <nav>
-              <Navbar />
-            </nav>
-            <div>{children}</div>
-            <footer>
-              <Footer />
-            </footer>
-          </div>
-        </TProvider>
+        <Providers>
+          <nav>
+            <Navbar />
+          </nav>
+          <div>{children}</div>
+          <footer>
+            <Footer />
+          </footer>
+        </Providers>
       </body>
     </html>
   );

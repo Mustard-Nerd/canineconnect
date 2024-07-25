@@ -1,6 +1,11 @@
+
+"use client"
+
+
 import { useTheme } from 'next-themes';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 type ComponentProps = {
   href?: string;
@@ -11,12 +16,30 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
   const aspectRatio = 100 / 100;
   const height = w * aspectRatio;
 
-  const { theme, setTheme } = useTheme();
-  const isDarkMode = theme === "system";
+  const [darkTheme, setDarkTheme] = useState(true);
+
+	useEffect(() => {
+		const theme = localStorage.getItem('theme');
+		if (theme === 'dark') {
+			setDarkTheme(true);
+		} else {
+			setDarkTheme(false);
+		}
+	}, []);
+
+	useEffect(() => {
+		if (darkTheme) {
+			document.documentElement.classList.add('dark');
+			localStorage.setItem('theme', 'dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+			localStorage.setItem('theme', 'light');
+		}
+	}, [darkTheme]);
 
   return (
     <Link href={href} className=' cursor-pointer'>
-      {isDarkMode ? (
+      {darkTheme ? (
         <Image
           src="/logoDark.svg"
           alt="Canine-Connect logo"
@@ -36,3 +59,4 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
     </Link>
   );
 };
+
