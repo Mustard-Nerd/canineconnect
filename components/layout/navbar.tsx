@@ -9,41 +9,38 @@ import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { useTheme } from "next-themes";
 
-
-
 export function Navbar() {
   const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
 
   const { theme } = useTheme();
 
-
   const handleModalClose = () => {
     setModal(false);
   };
 
   // const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isActive = (href: any) => pathname === href;
 
   const nav = [
     {
       name: "Products",
-      href: "#"
+      href: "#",
     },
     {
       name: "Services",
-      href: "#"
+      href: "#",
     },
     {
       name: "Vets and care",
-      href: "#"
-    }
-  ]
+      href: "#",
+    },
+  ];
 
   return (
-    <div className="font-quicksand w-full fixed">
+    <div className="font-quicksand w-full">
       <div
         className="
           flex justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
@@ -57,7 +54,11 @@ export function Navbar() {
               key={nav.name}
               href={nav.href}
               className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
+                ${
+                  isActive(nav.href)
+                    ? "text-primary border-b border-primary pb-6 -mb-6"
+                    : ""
+                }
               `}
             >
               {nav.name}
@@ -65,7 +66,6 @@ export function Navbar() {
           ))}
 
           {/* <div className="text-lg">The current theme is: {theme}</div> */}
-          
         </div>
 
         <div
@@ -78,12 +78,15 @@ export function Navbar() {
         </div>
         <div className=" flex gap-[16px] items-center medium-text">
           <div className="hidden sm:flex gap-[16px] items-center ">
-            <IoPersonSharp  className="w-[30px] h-[30px]"/>
-            <FaHeart  className="w-[30px] h-[30px]" />
+            <IoPersonSharp className="w-[30px] h-[30px]" />
+            <FaHeart className="w-[30px] h-[30px]" />
             <IoMdCart className="w-[30px] h-[30px]" />
           </div>
 
-          <div className="flex flex-col gap-[4px] lg:hidden group " onClick={() => setIsSliderOpen(true)}>
+          <div
+            className="flex flex-col gap-[4px] lg:hidden group "
+            onClick={() => setIsSliderOpen(true)}
+          >
             <div className="w-6 h-[2px] bg-primary group-hover:bg-secondary"></div>
             <div className="w-5 h-[2px] bg-primary group-hover:bg-secondary"></div>
             <div className="w-3 h-[2px] bg-primary group-hover:bg-secondary"></div>
@@ -91,17 +94,25 @@ export function Navbar() {
         </div>
       </div>
 
-
-      <div className={`fixed top-0  right-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isSliderOpen ? "translate-x-0" : "translate-x-full"}`}>
+      <div
+        className={`fixed top-0  right-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
+          isSliderOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
         <div className="flex mt-4 justify-end p-4">
-          <IoClose className="text-2xl cursor-pointer" onClick={() => setIsSliderOpen(false)} />
+          <IoClose
+            className="text-2xl cursor-pointer"
+            onClick={() => setIsSliderOpen(false)}
+          />
         </div>
         <div className="flex flex-col items-start pl-6 pr-9">
           {nav.map((navItem) => (
             <Link
               key={navItem.name}
               href={navItem.href}
-              className={`py-2 text-[15px] ${isActive(navItem.href) ? "text-secondary" : "text-primary"}`}
+              className={`py-2 text-[15px] ${
+                isActive(navItem.href) ? "text-secondary" : "text-primary"
+              }`}
               onClick={() => setIsSliderOpen(false)}
             >
               {navItem.name}
@@ -109,13 +120,11 @@ export function Navbar() {
           ))}
 
           <div className=" sm:hidden flex pt-4 gap-[16px] items-center ">
-            <IoPersonSharp  className="w-[20px] h-[20px]"/>
-            <FaHeart  className="w-[20px] h-[20px]" />
+            <IoPersonSharp className="w-[20px] h-[20px]" />
+            <FaHeart className="w-[20px] h-[20px]" />
             <IoMdCart className="w-[20px] h-[20px]" />
           </div>
-          
         </div>
-        
       </div>
     </div>
   );
