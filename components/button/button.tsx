@@ -20,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   const baseStyle = 'font-quicksand  bg-primary w-full rounded-[100px] px-[18px] py-[16px] text-white font-[500] text-[14px] leading-[21px] hover:bg-primaryD transform hover:translate-y-[-2px] transition-transform ';
   const disabledStyle = disabled ? 'opacity-50 cursor-not-allowed' : '';
 
-  const combinedClassName = `${baseStyle}  ${disabledStyle} ${className}`;
+  const combinedClassName = ` ${className} ${baseStyle}  ${disabledStyle}`;
 
   if (href) {
     return (

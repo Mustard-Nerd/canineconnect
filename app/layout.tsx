@@ -47,8 +47,8 @@ export default function RootLayout({
           <nav>
             <Navbar />
           </nav>
-          <main>{children}</main>
-          <Footer />
+          <main className="bg-white">{children}</main>
+            <Footer />
         </body>
       </html>
     </SessionProvider>
