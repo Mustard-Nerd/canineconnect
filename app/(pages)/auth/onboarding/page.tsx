@@ -7,8 +7,8 @@ const Onboarding = () => {
 
   return (
     <>
-      <div className="flex min-h-screen w-full justify-between items-start relative z-0">
-        <div className="w-1/2 h-screen relative">
+      <div className="flex w-full justify-between items-start relative z-0">
+        <div className="w-1/2 relative">
           <Image
             src={"/boarding.svg"}
             className="w-full h-full object-cover"
@@ -23,7 +23,7 @@ const Onboarding = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 pt-[84px] pb-[72px] flex flex-col items-center h-screen overflow-y-auto px-[30px]">
+        <div className="w-1/2 pt-[84px] pb-[72px] flex flex-col items-center overflow-y-auto px-[30px]">
           <h1 className="text-[64px] text-center leading-[96px] pb-[10px]">
             Welcome to the Pack!{" "}
           </h1>
