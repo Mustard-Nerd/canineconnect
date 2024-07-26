@@ -39,7 +39,7 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 pt-[84px] pb-[72px] h-screen overflow-y-auto pl-[120px] pr-[200px]">
+        <div className="w-1/2 pt-[84px] pb-[72px] h-screen overflow-y-auto pl-[120px] pr-[150px]">
           <h1 className="text-[64px] leading-[96px] pb-[15px]">
             Create Account
           </h1>
@@ -63,7 +63,7 @@ const SignUp = () => {
               <input
                 id="username"
                 type="text"
-                className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
                 placeholder="Username"
               />
               <p className="text-[#121212] text-[20px] font-[300]">
@@ -77,7 +77,7 @@ const SignUp = () => {
               <input
                 id="email"
                 type="email"
-                className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
                 placeholder="example@gmail.com"
               />
             </fieldset>
@@ -88,7 +88,7 @@ const SignUp = () => {
               <input
                 id="phone"
                 type="tel"
-                className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
                 placeholder="+243"
               />
             </fieldset>
@@ -102,7 +102,7 @@ const SignUp = () => {
                   type={type}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                  className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
                   placeholder="Password"
                 />
                 <Icon
