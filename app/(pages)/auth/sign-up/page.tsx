@@ -23,7 +23,7 @@ const SignUp = () => {
   return (
     <>
       <div className="flex min-h-screen w-full justify-between items-start relative z-0">
-        <div className="w-1/2 h-screen relative">
+        <div className="w-1/2 relative">
           <Image
             src={"/signUp.svg"}
             className="w-full h-full object-cover"
@@ -39,7 +39,7 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 pt-[84px] pb-[72px] h-screen overflow-y-auto pl-[120px] pr-[150px]">
+        <div className="w-1/2 pt-[84px] pb-[72px] overflow-y-auto pl-[120px] pr-[150px]">
           <h1 className="text-[64px] leading-[96px] pb-[15px]">
             Create Account
           </h1>
