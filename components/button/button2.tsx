@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-type ButtonProps = {
+type Button2Props = {
   text: any;
   href?: string;
   onClick?: () => void;
@@ -10,14 +10,14 @@ type ButtonProps = {
 
 
 
-const Button: React.FC<ButtonProps> = ({
+const Button2: React.FC<Button2Props> = ({
   text,
   href,
   onClick,
   disabled = false,
   className = '',
 }) => {
-  const baseStyle = 'font-quicksand border border-secondary text-white dark:text-primary  bg-secondary w-full rounded-[5px] px-[20px] py-[7px] lg:py-[10px]   font-[700] text-[12px] lg:text-[15px]  leading-[25px]  transform hover:translate-y-[-2px] transition-transform ';
+  const baseStyle = 'font-quicksand border border-secondary w-full rounded-[5px] px-[20px] py-[7px] lg:py-[10px] text-secondary font-[700] text-[12px] lg:text-[15px]  leading-[25px]  transform hover:translate-y-[-2px] transition-transform ';
   const disabledStyle = disabled ? 'opacity-50 cursor-not-allowed' : '';
 
   const combinedClassName = `${baseStyle}  ${disabledStyle} ${className}`;
@@ -41,4 +41,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default Button2;

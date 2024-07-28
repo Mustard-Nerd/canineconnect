@@ -42,7 +42,7 @@ export function Footer() {
   ]
 
   return (
-    <div className="font-quicksand">
+    <div className="font-quicksand ">
       <div
         className="
           flex flex-col sm:flex-row  justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
@@ -56,20 +56,20 @@ export function Footer() {
             <div className="flex flex-col gap-5">
                   <div className="flex  items-center  gap-[13px] font-normal text-[15px] leading-[36px] cursor-pointer">
                         {nav.map((nav: any) => (
-                              <Link
+                            <Link
                               onClick={() => isActive(nav.href)}
                               key={nav.name}
                               href={nav.href}
                               className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
                               ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
                               `}
-                              >
+                            >
                               {nav.name}
-                              </Link>
+                            </Link>
                         ))}
                   </div>
                   <div className="font-normal text-[15px]">
-                        2024 Canine connect. All rights reserved
+                    2024 Canine connect. All rights reserved
                   </div>
             </div>
 
@@ -88,10 +88,7 @@ export function Footer() {
                         <RiTwitterXFill className="w-[30px] h-[30px]" />
                   </div> 
             </div>
-      </div>
-
-
-      
+      </div>  
     </div>
   );
 }

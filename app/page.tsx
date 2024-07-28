@@ -1,5 +1,5 @@
-
-
+import Hero from "@/screens/landing/hero";
+import Landing from "@/screens/landing/landing";
 
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <>
-      <div  className="h-[100vh]">
-
+      <div  className="">
+        <Landing />
       </div>
     </>
   )

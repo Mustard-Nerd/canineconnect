@@ -33,13 +33,13 @@ export const viewport: Viewport = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en"  suppressHydrationWarning>
-      <body className={local.className}>
+    <html lang="en" className="dark"   suppressHydrationWarning>
+      <body  className={local.className}>
         <Providers>
           <nav>
             <Navbar />
           </nav>
-          <div>{children}</div>
+          <div className=" z-10">{children}</div>
           <footer>
             <Footer />
           </footer>

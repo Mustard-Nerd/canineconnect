@@ -1,8 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: 'class',
-  content: [
+    content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./screens/**/*.{js,ts,jsx,tsx,mdx}",
@@ -28,6 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif'],
+        benz: ['Benz Grotesk', 'sans-serif'],
       },
       screens: {
         'base': '200px',
