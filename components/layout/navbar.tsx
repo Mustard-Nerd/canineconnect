@@ -40,7 +40,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="font-quicksand w-full">
+    <div className="font-quicksand w-full fixed z-50 bg-white dark:bg-primary">
       <div
         className="
           flex justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
@@ -65,7 +65,7 @@ export function Navbar() {
             </Link>
           ))}
 
-          {/* <div className="text-lg">The current theme is: {theme}</div> */}
+          
         </div>
 
         <div
@@ -83,27 +83,18 @@ export function Navbar() {
             <IoMdCart className="w-[30px] h-[30px]" />
           </div>
 
-          <div
-            className="flex flex-col gap-[4px] lg:hidden group "
-            onClick={() => setIsSliderOpen(true)}
-          >
-            <div className="w-6 h-[2px] bg-primary group-hover:bg-secondary"></div>
-            <div className="w-5 h-[2px] bg-primary group-hover:bg-secondary"></div>
-            <div className="w-3 h-[2px] bg-primary group-hover:bg-secondary"></div>
+          <div className="flex flex-col gap-[4px] lg:hidden group " onClick={() => setIsSliderOpen(true)}>
+            <div className="w-6 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
+            <div className="w-5 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
+            <div className="w-3 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
           </div>
         </div>
       </div>
 
-      <div
-        className={`fixed top-0  right-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${
-          isSliderOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="flex mt-4 justify-end p-4">
-          <IoClose
-            className="text-2xl cursor-pointer"
-            onClick={() => setIsSliderOpen(false)}
-          />
+
+      <div className={`fixed top-0  right-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isSliderOpen ? "translate-x-0" : "translate-x-full"}`}>
+        <div className="flex mt-4 justify-end p-4 text-primary ">
+          <IoClose className="text-2xl cursor-pointer" onClick={() => setIsSliderOpen(false)} />
         </div>
         <div className="flex flex-col items-start pl-6 pr-9">
           {nav.map((navItem) => (
@@ -119,9 +110,9 @@ export function Navbar() {
             </Link>
           ))}
 
-          <div className=" sm:hidden flex pt-4 gap-[16px] items-center ">
-            <IoPersonSharp className="w-[20px] h-[20px]" />
-            <FaHeart className="w-[20px] h-[20px]" />
+          <div className=" sm:hidden flex pt-4 gap-[16px] items-center text-primary  ">
+            <IoPersonSharp  className="w-[20px] h-[20px]"/>
+            <FaHeart  className="w-[20px] h-[20px]" />
             <IoMdCart className="w-[20px] h-[20px]" />
           </div>
         </div>

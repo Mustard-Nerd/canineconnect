@@ -5,6 +5,13 @@
 @tailwind utilities;
 
 
+@font-face {
+  font-family: 'Benz Grotesk';
+  src: url('/fonts/Benz Grotesk.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 :root {
   --foreground-rgb: 0, 0, 0; 
@@ -37,29 +44,26 @@ body {
   }
 }
 
+
 .small-text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 16px;
-}
-
-.normal-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
+  line-height: 15px;
 }
 
 .medium-text {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 145%;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 19px;
 }
 
 .bold-text {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 34px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 19px;
 }
+
+
 
 input:focus {
   outline: none; 
@@ -107,3 +111,28 @@ input:focus {
 .dropshadow2 {
   box-shadow: 0px 4px 5px 5px rgba(0, 0, 0, 0.61);
 }
+
+
+
+
+
+.react-multi-carousel-track{
+  gap: 20px;
+}
+
+@media screen and (max-width: 360px) {
+  .react-multi-carousel-track {
+    gap: 5px;
+  }
+  .react-multi-carousel-item{
+    width: 340px
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .dropshadow3 {
+    box-shadow: 0px 4px 4px 0px #F1F1F1;
+  }
+}
+

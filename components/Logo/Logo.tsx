@@ -15,31 +15,28 @@ export const Logo = ({ href = '/', w = 350 }: ComponentProps) => {
   const aspectRatio = 350 / 350;
   const height = w * aspectRatio;
 
-  const [darkTheme, setDarkTheme] = useState(true);
+  const { theme, systemTheme } = useTheme();
 
-	useEffect(() => {
-		const theme = localStorage.getItem('theme');
-		if (theme === 'dark') {
-			setDarkTheme(true);
-		} else {
-			setDarkTheme(false);
-		}
-	}, []);
+  const [mounted, setMounted] = useState(false);
 
-	useEffect(() => {
-		if (darkTheme) {
-			document.documentElement.classList.add('dark');
-			localStorage.setItem('theme', 'dark');
-		} else {
-			document.documentElement.classList.remove('dark');
-			localStorage.setItem('theme', 'light');
-		}
-	}, [darkTheme]);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
+
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
+  console.log(currentTheme , "current theme isss")
+  console.log(theme , " theme isss")
+  console.log(`System theme: ${systemTheme}`);
+
+
 
 
   return (
     <Link href={href} className=' cursor-pointer'>
-      {darkTheme ? (
+      {systemTheme === 'dark' ?(
         <Image
           src="/canine-connectD.svg"
           alt="Canine-Connect logo"

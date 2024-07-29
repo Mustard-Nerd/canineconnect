@@ -39,7 +39,7 @@ export function Footer() {
   ];
 
   return (
-    <div className="font-quicksand bg-white">
+    <div className="font-quicksand ">
       <div
         className="
           flex flex-col sm:flex-row z-40 justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
@@ -50,46 +50,42 @@ export function Footer() {
           <Logo2 />
         </div>
 
-        <div className="flex flex-col gap-5">
-          <div className="flex  items-center  gap-[13px] font-normal text-[15px] leading-[36px] cursor-pointer">
-            {nav.map((nav: any) => (
-              <Link
-                onClick={() => isActive(nav.href)}
-                key={nav.href}
-                href={nav.href}
-                className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                              ${
-                                isActive(nav.href)
-                                  ? "text-primary border-b border-primary pb-6 -mb-6"
-                                  : ""
-                              }
+            <div className="flex flex-col gap-5">
+                  <div className="flex  items-center  gap-[13px] font-normal text-[15px] leading-[36px] cursor-pointer">
+                        {nav.map((nav: any) => (
+                            <Link
+                              onClick={() => isActive(nav.href)}
+                              key={nav.name}
+                              href={nav.href}
+                              className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+                              ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
                               `}
-              >
-                {nav.name}
-              </Link>
-            ))}
-          </div>
-          <div className="font-normal text-[15px]">
-            2024 Canine connect. All rights reserved
-          </div>
-        </div>
+                            >
+                              {nav.name}
+                            </Link>
+                        ))}
+                  </div>
+                  <div className="font-normal text-[15px]">
+                    2024 Canine connect. All rights reserved
+                  </div>
+            </div>
 
         <div
           className={` hidden lg:flex 
                   gap-5 xl:absolute xl:top-1/2 xl:left-1/2 xl:transform 
                   xl:-translate-x-1/2 xl:-translate-y-1/2 
             `}
-        >
-          <Logo2 />
-        </div>
-        <div className=" flex gap-[16px] mt-5 sm:mt-0 items-center medium-text">
-          <div className="flex gap-[16px] items-center ">
-            <RiInstagramFill className="w-[30px] h-[30px]" />
-            <FaFacebookF className="w-[30px] h-[30px]" />
-            <RiTwitterXFill className="w-[30px] h-[30px]" />
-          </div>
-        </div>
-      </div>
+            >
+                  <Logo2 />
+            </div>
+            <div className=" flex gap-[16px] mt-5 sm:mt-0 items-center medium-text">
+                  <div className="flex gap-[16px] items-center ">
+                        <RiInstagramFill  className="w-[30px] h-[30px]"/>
+                        <FaFacebookF  className="w-[30px] h-[30px]" />
+                        <RiTwitterXFill className="w-[30px] h-[30px]" />
+                  </div> 
+            </div>
+      </div>  
     </div>
   );
 }
