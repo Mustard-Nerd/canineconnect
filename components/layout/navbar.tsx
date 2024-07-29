@@ -9,38 +9,35 @@ import { FaHeart } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { useTheme } from "next-themes";
 
-
-
 export function Navbar() {
   const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
 
   const { theme } = useTheme();
 
-
   const handleModalClose = () => {
     setModal(false);
   };
 
   // const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isActive = (href: any) => pathname === href;
 
   const nav = [
     {
       name: "Products",
-      href: "#"
+      href: "#",
     },
     {
       name: "Services",
-      href: "#"
+      href: "#",
     },
     {
       name: "Vets and care",
-      href: "#"
-    }
-  ]
+      href: "#",
+    },
+  ];
 
   return (
     <div className="font-quicksand w-full fixed z-50 bg-white dark:bg-primary">
@@ -57,7 +54,11 @@ export function Navbar() {
               key={nav.name}
               href={nav.href}
               className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                ${isActive(nav.href) ? "text-primary border-b border-primary pb-6 -mb-6" : ""}
+                ${
+                  isActive(nav.href)
+                    ? "text-primary border-b border-primary pb-6 -mb-6"
+                    : ""
+                }
               `}
             >
               {nav.name}
@@ -77,8 +78,8 @@ export function Navbar() {
         </div>
         <div className=" flex gap-[16px] items-center medium-text">
           <div className="hidden sm:flex gap-[16px] items-center ">
-            <IoPersonSharp  className="w-[30px] h-[30px]"/>
-            <FaHeart  className="w-[30px] h-[30px]" />
+            <IoPersonSharp className="w-[30px] h-[30px]" />
+            <FaHeart className="w-[30px] h-[30px]" />
             <IoMdCart className="w-[30px] h-[30px]" />
           </div>
 
@@ -100,7 +101,9 @@ export function Navbar() {
             <Link
               key={navItem.name}
               href={navItem.href}
-              className={`py-2 text-[15px] ${isActive(navItem.href) ? "text-secondary" : "text-primary"}`}
+              className={`py-2 text-[15px] ${
+                isActive(navItem.href) ? "text-secondary" : "text-primary"
+              }`}
               onClick={() => setIsSliderOpen(false)}
             >
               {navItem.name}
@@ -112,9 +115,7 @@ export function Navbar() {
             <FaHeart  className="w-[20px] h-[20px]" />
             <IoMdCart className="w-[20px] h-[20px]" />
           </div>
-          
         </div>
-        
       </div>
     </div>
   );
