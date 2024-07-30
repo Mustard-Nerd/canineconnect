@@ -1,4 +1,4 @@
-import ServiceScreen from "@/screens/landing/servicePage";
+import ServiceScreen from "@/screens/servicespage/servicePage";
 
 
 export default function ServicePage() {
@@ -10,7 +10,7 @@ export default function ServicePage() {
 
   return (
     <>
-      <div  className="">
+      <div className="">
         <ServiceScreen />
       </div>
     </>
