@@ -6,9 +6,9 @@ export default function Hero() {
   
   
     return (
-      <div className="pt-[100px] sm:pt-0">
-        <div className="hidden sm:flex justify-between px-4 pt-4 sm:pl-[30px] xl:pl-[150px] 2xl:pl-[200px] 
-            lg:pt-8 lg:gap-12 gap-5 ">
+      <div className=" sm:pt-0">
+        <div className="hidden sm:flex justify-between px-4  sm:pl-[30px] xl:pl-[150px] 2xl:pl-[200px] 
+            lg:gap-12 gap-5 ">
           <div className=" w-1/2 max-w-[570px] mt-[110px] lg:mt-[140px] xl:mt-[180px]">
             <div className=" font-benz font-bold text-[36px]  xl:text-[55px]">
                 Your Best Stop For All Your Dog Affairs
@@ -21,10 +21,10 @@ export default function Hero() {
                 <Button2  text="SELL" />
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-1/2 -mt-10">
             <Image
               src="/hero2.png"
-              alt="Aton logo"
+              alt="hero"
               width={1000}
               height={1000}
             />
