@@ -22,7 +22,7 @@ const SignIn = () => {
   };
   return (
     <>
-      <div className="flex min-h-screen w-full grid grid-cols-2 relative z-0">
+      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0">
         <div className=" relative col-span-1">
           <Image
             src={"/onboard.svg"}
