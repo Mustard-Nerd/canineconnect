@@ -40,7 +40,7 @@ export function Navbar() {
   ];
 
   return (
-    <div className="font-quicksand w-full fixed z-50 bg-white dark:bg-primary">
+    <div className="font-quicksand w-full sticky top-0 z-50 bg-white dark:bg-primary">
       <div
         className="
           flex justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
