@@ -39,7 +39,7 @@ export function Footer() {
   ];
 
   return (
-    <div className="font-quicksand ">
+    <div className="font-quicksand bg-white text-black dark:bg-black dark:text-white">
       <div
         className="
           flex flex-col sm:flex-row z-40 justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
