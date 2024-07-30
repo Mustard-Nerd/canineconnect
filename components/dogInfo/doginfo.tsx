@@ -5,11 +5,12 @@ import Button2 from '../button/button2';
 type DogInfoProps = {
   title: string;
   description: string;
-  buttonText: string;
-  buttonLink: string;
+  buttonText?: string;
+  buttonLink?: string;
   imageSrc: string;
   imageAlt: string;
-  row: string; 
+  row: string;
+  show?: boolean;  // Show or hide the button 
 };
 
 const DogInfo: React.FC<DogInfoProps> = ({
@@ -20,6 +21,7 @@ const DogInfo: React.FC<DogInfoProps> = ({
   imageSrc,
   imageAlt,
   row,
+  show = true,  // Show or hide the button
 }) => {
   return (
     <div className={`flex my-[45px] ${row} flex-col items-center justify-between  gap-10 sm:gap-20 xl:gap-[150px]`}>
@@ -28,9 +30,9 @@ const DogInfo: React.FC<DogInfoProps> = ({
         <div className="font-quicksand pt-4 text-center sm:text-left font-normal text-[15px] lead-[24px] max-w-[480px]">
           {description}
         </div>
-        <div className="mt-5 sm:mt-10 lg:w-[180px]">
+       {show &&  <div className="mt-5 sm:mt-10 lg:w-[180px]">
           <Button2 text={buttonText} href={buttonLink} />
-        </div>
+        </div>}
       </div>
       <div>
         <Image
