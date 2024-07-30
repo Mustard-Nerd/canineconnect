@@ -10,16 +10,9 @@ import { IoMdCart } from "react-icons/io";
 import { useTheme } from "next-themes";
 
 export function Navbar() {
-  const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
 
-  const { theme } = useTheme();
 
-  const handleModalClose = () => {
-    setModal(false);
-  };
-
-  // const router = useRouter()
   const pathname = usePathname();
 
   const isActive = (href: any) => pathname === href;
@@ -31,7 +24,7 @@ export function Navbar() {
     },
     {
       name: "Services",
-      href: "#",
+      href: "/service",
     },
     {
       name: "Vets and care",
@@ -53,10 +46,10 @@ export function Navbar() {
               onClick={() => isActive(nav.href)}
               key={nav.name}
               href={nav.href}
-              className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+              className={` hover:text-secondary 
                 ${
                   isActive(nav.href)
-                    ? "text-primary border-b border-primary pb-6 -mb-6"
+                    ? " border-b  "
                     : ""
                 }
               `}

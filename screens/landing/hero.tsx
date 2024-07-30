@@ -24,7 +24,7 @@ export default function Hero() {
           <div className="w-1/2">
             <Image
               src="/hero2.png"
-              alt="Aton logo"
+              alt="hero"
               width={1000}
               height={1000}
             />
