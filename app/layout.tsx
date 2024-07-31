@@ -37,6 +37,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Providers>
           <nav className='sticky top-0 z-40'>
             <Navbar />
+            <div>hello </div>
           </nav>
           <div className=" z-10">{children}</div>
           <footer>
