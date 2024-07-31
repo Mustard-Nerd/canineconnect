@@ -7,6 +7,11 @@ const handle = app.getRequestHandler();
 
 
 
+
+
+
 exports.nextjs = functions.https.onRequest((req, res) => {
   return app.prepare().then(() => handle(req, res));
 });
+
+
