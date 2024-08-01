@@ -5,14 +5,11 @@ import Landing from "@/screens/landing/landing";
 export default function Home() {
 
 
-  const productLaunched = process.env.NEXT_PUBLIC_PRODUCT_LAUNCHED === 'true';
-
-
-
   return (
     <>
       <div  className="">
         <Landing />
+        <div>firebase deploy --only hosting</div>
       </div>
     </>
   )
