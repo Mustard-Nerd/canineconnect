@@ -42,7 +42,7 @@ export function Footer2() {
   ]
 
   return (
-    <div className="font-quicksand w-full my-10 lg:my-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px]">
+    <div className="font-quicksand w-full mp-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px]">
       <div className=" relative">
         <Image
           src="/blackdog.png"
@@ -83,7 +83,7 @@ export function Footer2() {
         </div>
       </div>  
 
-      <div className="px-4 my-9">
+      <div className="px-4 py-9">
         <div className=" flex flex-col sm:items-center">
           <div className=" font-benz text-[20px] sm:text-center sm:text-[30px] font-bold pb-4 mt-10">
             Stay Ahead of the Pack;

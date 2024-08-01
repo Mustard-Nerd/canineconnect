@@ -7,7 +7,7 @@ const Onboarding = () => {
 
   return (
     <>
-      <div className=" w-full  grid grid-cols-2 relative z-0">
+      <div className=" w-full  grid grid-cols-2 relative z-0 dark:bg-[#121212]">
         <div className="col-span-1 relative">
           <Image
             src={"/boarding.svg"}
@@ -27,7 +27,7 @@ const Onboarding = () => {
           <h1 className="text-[64px] text-center leading-[96px] pb-[10px]">
             Welcome to the Pack!{" "}
           </h1>
-          <p className="font-quicksand text-[32px] text-[#121212] text-center font-[700] mb-[50px]">
+          <p className="font-quicksand text-[32px] text-[#121212] dark:text-white text-center font-[700] mb-[50px]">
             Help us serve you better by telling us who you are
           </p>
 
@@ -43,7 +43,7 @@ const Onboarding = () => {
                 height={40}
                 alt=""
               />
-              <p className="text-[#121212] text-[14px] font-[600] font-quicksand">
+              <p className="text-[#121212] dark:text-white text-[14px] font-[600] font-quicksand">
                 I&apos;m in search of a furry friend/Dog feed /Accessories
               </p>
             </Link>
@@ -58,7 +58,7 @@ const Onboarding = () => {
                 height={40}
                 alt=""
               />
-              <p className="text-[#121212] text-[14px] font-[600] font-quicksand">
+              <p className="text-[#121212] dark:text-white text-[14px] font-[600] font-quicksand">
                 I sell Dogs/Dog Feed / Dog Accessories
               </p>
             </Link>

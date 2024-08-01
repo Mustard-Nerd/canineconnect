@@ -9,7 +9,7 @@ import DogInfo from "@/components/dogInfo/doginfo";
 
 function Vendor() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen dark:bg-[#121212]">
       <div className="grid grid-cols-2 items-start">
         <div className=" col-span-1 min-w-[570px] pl-4 sm:pl-[30px] xl:pl-[150px] 2xl:pl-[200px] pt-[68px]">
           <div className=" font-benz font-bold text-[30px] leading-[66px] xl:text-[55px]">
@@ -37,7 +37,7 @@ function Vendor() {
         </h1>
         <div className=" flex justify-between items-start gap-[10px]">
           <div className="flex justify-center w-[25%] items-center flex-col gap-2">
-            <div className="rounded-[10px] border-[#121212] border-[1px] px-[20px] pt-[35px] pb-[62px]">
+            <div className="rounded-[10px] border-[#121212] dark:border-white border-[1px] px-[20px] pt-[35px] pb-[62px]">
               <Image
                 src={"chain.svg"}
                 width={40}
@@ -55,7 +55,7 @@ function Vendor() {
             </div>
           </div>
           <div className="flex justify-center w-[25%] items-center flex-col gap-2">
-            <div className="rounded-[10px] border-[#121212] border-[1px] px-[20px] pt-[35px] pb-[62px]">
+            <div className="rounded-[10px] border-[#121212] dark:border-white border-[1px] px-[20px] pt-[35px] pb-[62px]">
               <Image
                 src={"chain.svg"}
                 width={40}
@@ -73,7 +73,7 @@ function Vendor() {
             </div>
           </div>
           <div className="flex justify-center w-[25%] items-center flex-col gap-2">
-            <div className="rounded-[10px] border-[#121212] border-[1px] px-[20px] pt-[35px] pb-[62px]">
+            <div className="rounded-[10px] border-[#121212] dark:border-white border-[1px] px-[20px] pt-[35px] pb-[62px]">
               <Image
                 src={"chain.svg"}
                 width={40}
@@ -91,7 +91,7 @@ function Vendor() {
             </div>
           </div>
           <div className="flex justify-center w-[25%] items-center flex-col gap-2">
-            <div className="rounded-[10px] border-[#121212] border-[1px] px-[20px] pt-[35px] pb-[62px]">
+            <div className="rounded-[10px] border-[#121212] dark:border-white border-[1px] px-[20px] pt-[35px] pb-[62px]">
               <Image
                 src={"chain.svg"}
                 width={40}

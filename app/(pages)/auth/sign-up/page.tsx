@@ -22,7 +22,7 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0">
+      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0 dark:bg-[#121212]">
         <div className="col-span-1 relative">
           <Image
             src={"/signUp.svg"}
@@ -43,7 +43,7 @@ const SignUp = () => {
           <h1 className="text-[40px] leading-[48px] pb-[15px]">
             Create Account
           </h1>
-          <p className="font-quicksand text-[24px] text-[#121212] font-[400] mb-[48px]">
+          <p className="font-quicksand text-[24px] text-[#121212] dark:text-white font-[400] mb-[48px]">
             Already have an account?{" "}
             <span>
               <Link href={"/auth/sign-in"} className="underline font-[700]">
