@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-    content: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./screens/**/*.{js,ts,jsx,tsx,mdx}",
@@ -25,8 +25,8 @@ const config: Config = {
         dropshadow: "#6E61CA20",
       },
       fontFamily: {
-        quicksand: ['Quicksand', 'sans-serif'],
-        benz: ['Benz Grotesk', 'sans-serif'],
+        quicksand: ["Quicksand", "sans-serif"],
+        benz: ["Benz Grotesk", "sans-serif"],
       },
       screens: {
         base: "200px",
@@ -38,7 +38,8 @@ const config: Config = {
         "2xl": "1536px",
       },
       boxShadow: {
-        custom: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+        custom: "0px 4px 4px 4px rgba(0, 0, 0, 0.25)",
+        customWhite: "0px 4px 4px 4px rgba(255, 255, 255, 1)",
       },
       data: {
         checked: 'ui~="checked"',
