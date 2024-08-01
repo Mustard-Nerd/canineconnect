@@ -42,7 +42,7 @@ export function Footer2() {
   ]
 
   return (
-    <div className="font-quicksand w-full mp-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px]">
+    <div className="relative font-quicksand overflow-hidden w-full my-10 lg:my-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10">
       <div className=" relative">
         <Image
           src="/blackdog.png"
@@ -95,7 +95,7 @@ export function Footer2() {
             By signing up, you consent to receiving marketing emails and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails.
           </div>
           <div className="mt-5 sm:mt-10 lg:w-[180px]">
-            <Button2 text="Sign Up" href="/" />
+            <Button2 text="Sign Up" href="/auth/sign-up" />
           </div>
         </div>
 
@@ -114,6 +114,86 @@ export function Footer2() {
           </div>
         </div>
       </div>
+
+      <Image
+        src="/doodles/arrow-down.png"
+        alt="doodles"
+        className="hidden xl:flex absolute  top-[350px] left-32"
+        width={100}
+        height={100}
+      />
+      <Image
+        src="/doodles/arrow-top.png"
+        alt="doodles"
+        className="absolute hidden xl:flex  -bottom-10 right-0"
+        width={100}
+        height={100}
+      />
+      <Image
+        src="/doodles/arrow-top.png"
+        alt="doodles"
+        className="absolute flex xl:hidden  -bottom-10 right-0"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/flower.png"
+        alt="doodles"
+        className="absolute z-10 hidden xl:flex  bottom-[360px] left-[330px]"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/flower.png"
+        alt="doodles"
+        className="absolute hidden  xl:flex bottom-[360px] right-40"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/flower.png"
+        alt="doodles"
+        className="absolute top-[380px] hidden sm:flex xl:hidden  right-40"
+        width={50}
+        height={50}
+      />
+      <Image
+        src="/doodles/paw.png"
+        alt="doodles"
+        className="absolute hidden xl:flex  bottom-[190px] left-20"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/paw.png"
+        alt="doodles"
+        className="absolute  bottom-[190px] -right-10"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/paw.png"
+        alt="doodles"
+        className="absolute xl:hidden flex  bottom-[190px] -left-10"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/star.png"
+        alt="doodles"
+        className="absolute hidden xl:flex top-[400px] right-80"
+        width={70}
+        height={70}
+      />
+      <Image
+        src="/doodles/star.png"
+        alt="doodles"
+        className="absolute   -bottom-10 left-0"
+        width={70}
+        height={70}
+      />
+
+
     </div>
   );
 }

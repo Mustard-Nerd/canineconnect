@@ -17,8 +17,8 @@ export default function Hero() {
                 All your dog needs all in one place
             </div>
             <div className=" flex gap-3 items-center mt-10 w-[230px]">
-                <Button text="BUY" />
-                <Button2  text="SELL" />
+                <Button text="BUY"  href="/auth/sign-up" />
+                <Button2  text="SELL" href="/auth/sign-up" />
             </div>
           </div>
           <div className="w-1/2 -mt-10">
