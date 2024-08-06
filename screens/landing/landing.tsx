@@ -25,7 +25,7 @@ const items = [
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/bag.png",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
@@ -46,7 +46,7 @@ const items = [
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/bag.png",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
@@ -60,7 +60,7 @@ const items = [
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/german.png",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
@@ -129,13 +129,13 @@ export default function Landing() {
 
             <div className="relative rounded-[10px]">
               <Image
-                src="/dogfood.png"
+                src="/dogfeed.png"
                 alt="dogfood"
                 className="rounded-[10px] "
                 width={600}
                 height={324}
               />
-              <div className="absolute inset-0 rounded-[10px] bg-[#242325] opacity-50 z-0"></div>
+              <div className="absolute inset-0 rounded-[10px] bg-[#242325] opacity-70 z-0"></div>
               <div className=" absolute inset-0 ml-10 top-16 sm:top-16 lg:top-28">
                 <div className=" font-quicksand font-bold text-[20px] lg:text-[30px]">
                   Dry food
@@ -149,11 +149,11 @@ export default function Landing() {
         </div>
 
         <DogInfo
-          title="Any dog, Any breed"
-          description="Here at canine connect we deal in all kind of dog and breeds. We offer a platform where you can easily check through for your next best friend."
-          buttonText="Shop now"
+          title="Locate the nearest services"
+          description="Here at canine connect we deal in all kind of dog and breeds . we offer a platform where you can easily check through for your next bestfriend."
+          buttonText="Connect"
           buttonLink="/shop"
-          imageSrc="/dog1.png"
+          imageSrc="/girlxdog.png"
           imageAlt="dog"
           row="sm:flex-row"
         />

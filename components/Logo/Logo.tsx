@@ -25,7 +25,7 @@ export const Logo = ({ href = '/', w = 350 }: ComponentProps) => {
 
   if (!mounted) return null;
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
 
 
 

@@ -16,11 +16,18 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
   const aspectRatio = 100 / 100;
   const height = w * aspectRatio;
 
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-  const { theme, systemTheme } = useTheme();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  if (!mounted) return null;
+
+
+  const {  systemTheme } = useTheme();
+
+  // const currentTheme = theme === 'system' ? systemTheme : theme;
 
 
 

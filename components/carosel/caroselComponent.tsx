@@ -38,7 +38,7 @@ const ReusableCarousel: React.FC<ReusableCarouselProps> = ({
         const { currentSlide } = carouselState;
       
         return (
-          <div className="absolute   top-36   flex justify-between w-full">
+          <div className="absolute   bottom-[50%]   flex justify-between w-full">
             <FaCircleArrowLeft
               className={`cursor-pointer -ml-3 lg:-ml-7 w-6 h-6 lg:w-10 lg:h-10 text-secondary`}
               onClick={previous}
