@@ -46,7 +46,7 @@ function AboutScreen() {
         </div>
       </div>
 
-      <div className=" px-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] mt-[68px] flex justify-between items-start gap-2">
+      <div className="px-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] mt-[68px] flex justify-between items-start gap-2">
         <div className="flex justify-center w-[33%] items-center flex-col gap-2">
           <h1 className="text-[30px] font-bold">Mission</h1>
           <div className="rounded-[10px] border-[#121212] dark:border-white border-[1px] px-[20px] pt-[35px] h-[220px]">
