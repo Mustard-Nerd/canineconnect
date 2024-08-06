@@ -24,13 +24,7 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
   }, []);
 
   if (!mounted) return null;
-
-
   const {  systemTheme } = useTheme();
-
-  // const currentTheme = theme === 'system' ? systemTheme : theme;
-
-
 
   return (
     <Link href={href} className=' cursor-pointer'>
