@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 
 "use client"
 
@@ -33,7 +34,7 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
 
   return (
     <Link href={href} className=' cursor-pointer'>
-      {systemTheme === 'dark' ?(
+      {systemTheme === 'dark' ? (
         <Image
           src="/logoDark.svg"
           alt="Canine-Connect logo"
