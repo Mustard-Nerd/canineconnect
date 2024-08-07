@@ -22,8 +22,8 @@ const SignIn = () => {
   };
   return (
     <>
-      <div className="flex min-h-screen w-full justify-between items-start relative z-0">
-        <div className="w-1/2 relative">
+      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0 dark:bg-[#121212]">
+        <div className=" relative col-span-1">
           <Image
             src={"/onboard.svg"}
             className="w-full h-full object-cover"
@@ -39,11 +39,11 @@ const SignIn = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 pt-[84px] pb-[72px] overflow-y-auto pl-[120px] pr-[200px]">
+        <div className="col-span-1 pt-[84px] pb-[72px] overflow-y-auto px-[120px]">
           <h1 className="text-[64px] leading-[96px] pb-[15px]">
             Welcome Back!
           </h1>
-          <p className="font-quicksand text-[24px] text-[#121212] font-[400] mb-[84px]">
+          <p className="font-quicksand text-[24px] text-[#121212] dark:text-white font-[400] mb-[84px]">
             Don&apos;t have an account?{" "}
             <span>
               <Link href={"/auth/sign-up"} className="underline font-[700]">
@@ -63,7 +63,7 @@ const SignIn = () => {
               <input
                 id="username"
                 type="text"
-                className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                 placeholder="Username"
               />
             </fieldset>
@@ -77,7 +77,7 @@ const SignIn = () => {
                   type={type}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                  className="shadow-custom h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                   placeholder="Password"
                 />
                 <Icon
@@ -111,9 +111,9 @@ const SignIn = () => {
           </button>
 
           <div className="flex justify-between items-center w-full gap-[32px] pt-[30px] pb-[50px]">
-            <div className="bg-[#121212] h-[1px] w-full"></div>
+            <div className="bg-[#121212] dark:bg-white h-[1px] w-full"></div>
             <p className="font-quicksand text-[18px] font-[700]">or</p>
-            <div className="bg-[#121212] h-[1px] w-full"></div>
+            <div className="bg-[#121212] dark:bg-white h-[1px] w-full"></div>
           </div>
 
           <button className="font-quicksand bg-white border-[1px] border-[#0046FF] mt-2 text-[24px] font-[600]  w-full rounded-[100px] px-[18px] py-[16px] text-[#0A0A0B] leading-[21px] hover:bg-primaryD transform hover:translate-y-[-2px] transition-transform">

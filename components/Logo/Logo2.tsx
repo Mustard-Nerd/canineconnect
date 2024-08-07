@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 
 "use client"
 
@@ -16,21 +17,18 @@ export const Logo2 = ({ href = '/', w = 100 }: ComponentProps) => {
   const aspectRatio = 100 / 100;
   const height = w * aspectRatio;
 
-  const [darkTheme, setDarkTheme] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-  const { theme, systemTheme } = useTheme();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
-
-  console.log(currentTheme , "current theme isss")
-  console.log(theme , " theme isss")
-  console.log(`System theme: ${systemTheme}`);
-
-
+  if (!mounted) return null;
+  const {  systemTheme } = useTheme();
 
   return (
     <Link href={href} className=' cursor-pointer'>
-      {systemTheme === 'dark' ?(
+      {systemTheme === 'dark' ? (
         <Image
           src="/logoDark.svg"
           alt="Canine-Connect logo"

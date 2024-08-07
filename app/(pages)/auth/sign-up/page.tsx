@@ -22,8 +22,8 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className="flex min-h-screen w-full justify-between items-start relative z-0">
-        <div className="w-1/2 relative">
+      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0 dark:bg-[#121212]">
+        <div className="col-span-1 relative">
           <Image
             src={"/signUp.svg"}
             className="w-full h-full object-cover"
@@ -39,12 +39,12 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="w-1/2 pt-[84px] pb-[72px] overflow-y-auto pl-[120px] pr-[150px]">
-          <h1 className="text-[64px] leading-[96px] pb-[15px]">
+        <div className="col-span-1 pt-[40px] pb-[72px] overflow-y-auto px-[120px]">
+          <h1 className="text-[40px] leading-[48px] pb-[15px]">
             Create Account
           </h1>
-          <p className="font-quicksand text-[24px] text-[#121212] font-[400] mb-[84px]">
-            Already have an account? {" "}
+          <p className="font-quicksand text-[24px] text-[#121212] dark:text-white font-[400] mb-[48px]">
+            Already have an account?{" "}
             <span>
               <Link href={"/auth/sign-in"} className="underline font-[700]">
                 Login
@@ -63,7 +63,7 @@ const SignUp = () => {
               <input
                 id="username"
                 type="text"
-                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                 placeholder="Username"
               />
               <p className="text-[#121212] text-[20px] font-[300]">
@@ -77,7 +77,7 @@ const SignUp = () => {
               <input
                 id="email"
                 type="email"
-                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                 placeholder="example@gmail.com"
               />
             </fieldset>
@@ -88,7 +88,7 @@ const SignUp = () => {
               <input
                 id="phone"
                 type="tel"
-                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                 placeholder="+243"
               />
             </fieldset>
@@ -102,7 +102,7 @@ const SignUp = () => {
                   type={type}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212]"
+                  className="shadow-custom bg-none h-[60px] w-full border-none outline-none rounded-[8px] px-[45px] text-[20px] font-[300] text-[#121212] bg-white"
                   placeholder="Password"
                 />
                 <Icon
@@ -132,11 +132,15 @@ const SignUp = () => {
               </div>
             </fieldset>
 
-            <fieldset className="flex justify-start items-center gap-[16px] w-full">
-              <input type="checkbox" id="check" className="h-[30px] w-[30px]" />
+            <fieldset className="flex justify-start items-center gap-[16px] w-full pl-[18px]">
+              <input
+                type="checkbox"
+                id="check"
+                className="h-[30px] w-[30px] bg-white text-white"
+              />
               <label
                 htmlFor="check"
-                className="text-[20px] font-[300] leading-[36px] "
+                className="text-[20px] font-[300] leading-[36px]"
               >
                 I agree to all{" "}
                 <span className="text-[#0046FF]">privacy policies</span> and{" "}
