@@ -23,7 +23,7 @@ export function Footer() {
 
   const isActive = (href: any) => pathname === href;
 
-  const nav = [
+  const nav1 = [
     {
       name: "Home",
       href: "/",
@@ -96,7 +96,7 @@ export function Footer() {
           <div className=" flex w-full lg:w-fit lg:gap-40  justify-between">
 
             <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav.map((nav: any) => (
+              {nav1.map((nav: any) => (
                 <Link
                   onClick={() => isActive(nav.href)}
                   key={nav.name}
@@ -202,7 +202,7 @@ export function Footer() {
 
 
             <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav.map((nav: any) => (
+              {nav1.map((nav: any) => (
                 <Link
                   onClick={() => isActive(nav.href)}
                   key={nav.name}
