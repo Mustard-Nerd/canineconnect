@@ -13,6 +13,8 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import Image from "next/image";
 
+
+
 const Slider = () => {
   return (
     <>

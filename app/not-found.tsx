@@ -8,28 +8,28 @@ const Custom404 = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen text-center dark:bg-primary px-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] pt-[60px]">
       <div className="flex justify-between items-start w-full gap-10 mb-[125px]">
-        <div className="w-1/2 pt-[50px] px-[45px]">
+        <div className=" w-[640px] pt-[50px] px-[45px]">
           <h1 className="text-[60px] font-[850px] mb-10">
             Oops! We&apos;ve dug <br className="hidden 3xl:block" /> up a hole!
           </h1>
-          <p className="font-quicksand text-center text-[32px]">
+          <p className="font-quicksand text-center text-[30px]">
             Looks like this page has gone missing, but don&apos;t worry,
             we&apos;ve got plenty more to explore.
           </p>
 
           <div className="mt-[90px] flex justify-center items-center">
-            <button className="dark:bg-[#001C66] bg-[#0046FF] text-white px-[50px] font-quicksand rounded-[8px] h-[96px] text-[24px]">
+            <Link href="/" className="dark:bg-[#001C66] bg-[#0046FF] text-white px-[50px] font-quicksand rounded-[8px] py-[26px] text-center text-[24px] font-normal">
               Sniff out more goodies
-            </button>
+            </Link>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="">
           <Image
             src={"/404.svg"}
-            width={30}
-            height={30}
+            width={600}
+            height={600}
             alt=""
-            className="w-full"
+            className=""
           />
         </div>
       </div>
