@@ -42,7 +42,7 @@ export function Footer2() {
   ]
 
   return (
-    <div className="relative font-quicksand overflow-hidden w-full my-10 lg:my-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10">
+    <div className="relative font-quicksand overflow-hidden w-full py-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10">
       <div className=" relative">
         <Image
           src="/blackdog.png"

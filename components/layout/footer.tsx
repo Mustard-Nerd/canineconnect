@@ -50,7 +50,7 @@ export function Footer() {
     {
       name: "Accessories",
       href: "#",
-    }, 
+    },
   ];
 
   const nav3 = [
@@ -92,9 +92,7 @@ export function Footer() {
             py-16 sm:items-center relative border-t-[1px] shadow-md 
           "
         >
-
           <div className=" flex w-full lg:w-fit lg:gap-40  justify-between">
-
             <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
               {nav1.map((nav: any) => (
                 <Link
@@ -102,11 +100,7 @@ export function Footer() {
                   key={nav.name}
                   href={nav.href}
                   className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
                 >
                   {nav.name}
@@ -121,20 +115,15 @@ export function Footer() {
                   key={nav.name}
                   href={nav.href}
                   className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
                 >
                   {nav.name}
                 </Link>
               ))}
             </div>
-
           </div>
-            
+
           <div
             className={`hidden  lg:flex flex-col items-center
               gap-5 absolute top-1/2 left-1/2 transform 
@@ -157,11 +146,7 @@ export function Footer() {
                   key={nav.name}
                   href={nav.href}
                   className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
                 >
                   {nav.name}
@@ -176,11 +161,7 @@ export function Footer() {
                   key={nav.name}
                   href={nav.href}
                   className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
                 >
                   {nav.name}
@@ -200,46 +181,36 @@ export function Footer() {
             <Logo2 />
           </div>
 
-
-            <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav1.map((nav: any) => (
-                <Link
-                  onClick={() => isActive(nav.href)}
-                  key={nav.name}
-                  href={nav.href}
-                  className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+          <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
+            {nav1.map((nav: any) => (
+              <Link
+                onClick={() => isActive(nav.href)}
+                key={nav.name}
+                href={nav.href}
+                className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
-                >
-                  {nav.name}
-                </Link>
-              ))}
-            </div>
+              >
+                {nav.name}
+              </Link>
+            ))}
+          </div>
 
-            <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav2.map((nav: any) => (
-                <Link
-                  onClick={() => isActive(nav.href)}
-                  key={nav.name}
-                  href={nav.href}
-                  className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+          <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
+            {nav2.map((nav: any) => (
+              <Link
+                onClick={() => isActive(nav.href)}
+                key={nav.name}
+                href={nav.href}
+                className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
-                >
-                  {nav.name}
-                </Link>
-              ))}
-            </div>
+              >
+                {nav.name}
+              </Link>
+            ))}
+          </div>
 
-            
           <div
             className={`hidden  lg:flex flex-col items-center
               gap-5 absolute top-1/2 left-1/2 transform 
@@ -254,42 +225,34 @@ export function Footer() {
             </div>
           </div>
 
-            <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav3.map((nav: any) => (
-                <Link
-                  onClick={() => isActive(nav.href)}
-                  key={nav.name}
-                  href={nav.href}
-                  className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+          <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
+            {nav3.map((nav: any) => (
+              <Link
+                onClick={() => isActive(nav.href)}
+                key={nav.name}
+                href={nav.href}
+                className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
-                >
-                  {nav.name}
-                </Link>
-              ))}
-            </div>
+              >
+                {nav.name}
+              </Link>
+            ))}
+          </div>
 
-            <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
-              {nav4.map((nav: any) => (
-                <Link
-                  onClick={() => isActive(nav.href)}
-                  key={nav.name}
-                  href={nav.href}
-                  className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
-                    ${
-                      isActive(nav.href)
-                        ? "text-secondary "
-                        : ""
-                    }
+          <div className="flex flex-col  items-start  gap-3 font-normal text-[15px] cursor-pointer">
+            {nav4.map((nav: any) => (
+              <Link
+                onClick={() => isActive(nav.href)}
+                key={nav.name}
+                href={nav.href}
+                className={` hover:text-secondary  hover:pb-6 hover:-mb-6 
+                    ${isActive(nav.href) ? "text-secondary " : ""}
                     `}
-                >
-                  {nav.name}
-                </Link>
-              ))}
+              >
+                {nav.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
