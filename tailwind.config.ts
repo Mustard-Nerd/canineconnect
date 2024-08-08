@@ -17,12 +17,14 @@ const config: Config = {
       colors: {
         primary: "#121212",
         secondary: "#0086FF",
-        primaryD: "#242EB2",
+        primaryD: "#DBEEFE",
         neutral: "#F7F8FC",
         accent: "#E1E0E6",
         textcolor: "#060419",
         textdarkgrey: "#1F323F",
         dropshadow: "#6E61CA20",
+        darkbg:"#003666",
+        border: "#497BFF"
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],

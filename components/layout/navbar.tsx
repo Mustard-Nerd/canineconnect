@@ -19,8 +19,8 @@ export function Navbar() {
 
   const nav = [
     {
-      name: "Products",
-      href: "#",
+      name: "Shop",
+      href: "/shop",
     },
     {
       name: "Services",
