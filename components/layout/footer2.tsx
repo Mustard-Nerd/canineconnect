@@ -91,6 +91,13 @@ export function Footer2() {
           <div className=" font-quicksand sm:py-4 font-normal lg:text-[15px] text-[13px] ">
             Sign up to our newsletter to get updates on exclusive deals, tips, and updates for dog Lovers!
           </div>
+          <div className=" max-w-[500px] w-full py-3">
+            <input
+              type="text"
+              placeholder="ENTER EMAIL ADDRESS"
+              className="border-[2px] rounded-[15px] bg-white border-[#121212] dark:border-[#FFFFFF] dark:bg-primary h-[60px] w-full font-bold px-5"
+            />
+          </div>
           <div className=" font-quicksand py-4 max-w-[670px] sm:text-center font-normal lg:text-[15px] text-[13px] " >
             By signing up, you consent to receiving marketing emails and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails.
           </div>

@@ -19,6 +19,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import Button from "@/components/button/button";
 import Link from "next/link";
+import { Footer3 } from "@/components/layout/footer3";
 
 
 
@@ -345,9 +346,11 @@ export default function ShopScreen() {
         <ShoppingList items={items2} title="Highly Nutritious Feed" />
       </div>
 
-      <div>
+      <div className=" mb-10 lg:mb-20">
         <ShoppingList items={items3} title="Exotic toys, grooming products, and lots more. . ." />
       </div>
+
+      <Footer3 />
 
     </div>
   );
