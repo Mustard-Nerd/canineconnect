@@ -34,7 +34,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch, placeholder = "Sear
         <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary dark:text-gray-400">
           <FaSearch />
         </div>
-        <button type="submit" className="absolute right-[3px]  top-1/2 px-3 rounded-r-[5px]  py-[9px] transform -translate-y-1/2 bg-secondary">
+        <button type="submit" className="absolute right-[3px]  top-1/2 px-3 rounded-r-[5px]  py-[9px] transform -translate-y-1/2 bg-secondary dark:bg-darkbg">
           <HiOutlineAdjustmentsHorizontal className="w-7 h-7" />
         </button>
       </div>
