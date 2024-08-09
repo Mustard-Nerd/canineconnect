@@ -85,7 +85,7 @@ export function Footer2() {
 
       <div className="px-4 py-9">
         <div className=" flex flex-col sm:items-center">
-          <div className=" font-benz text-[20px] sm:text-center sm:text-[30px] font-bold pb-4 mt-10">
+          <div className=" font-benz text-[20px] sm:text-center sm:text-[35px] font-bold pb-4 mt-10">
             Stay Ahead of the Pack;
           </div>
           <div className=" font-quicksand sm:py-4 font-normal lg:text-[15px] text-[13px] ">
@@ -101,7 +101,7 @@ export function Footer2() {
           <div className=" font-quicksand py-4 max-w-[670px] sm:text-center font-normal lg:text-[15px] text-[13px] " >
             By signing up, you consent to receiving marketing emails and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails.
           </div>
-          <div className="mt-5 sm:mt-10 lg:w-[180px]">
+          <div className="mt-5 sm:mt-10 lg:w-[180px]  justify-self-center flex justify-center">
             <Button2 text="Sign Up" href="/auth/sign-up" />
           </div>
         </div>
