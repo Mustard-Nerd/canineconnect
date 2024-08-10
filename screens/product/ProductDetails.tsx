@@ -38,13 +38,13 @@ const items = [
 const ProductDetails = () => {
   return (
     <>
-      <div className=" px-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] py-[75px] font-quicksand dark:bg-primary">
-        <div className="bg-[#DBEEFF] dark:bg-[#003666] py-[30px] px-[20px] rounded-[20px] mb-[70px]">
-          <h1 className="font-[700] text-[28px] min-[1724px]:text-[40px] pb-4">
+      <div className=" px-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] py-[24px] lg:py-[75px] font-quicksand dark:bg-primary">
+        <div className="bg-[#DBEEFF] dark:bg-[#003666] py-[30px] px-[20px] rounded-[20px] mb-[24px] lg:mb-[70px]">
+          <h1 className="font-[700] text-[20px] lg:text-[28px] min-[1724px]:text-[40px] pb-4 font-benz">
             Product Details
           </h1>
 
-          <ul className="list-disc text-[18px] min-[1724px]:text-[24px] px-4 pb-[80px]">
+          <ul className="list-disc lg:text-[18px] min-[1724px]:text-[24px] px-4 pb-5 lg:pb-[80px]">
             <li>
               Removable and washable pet supplies storage bag cat and dog cage
               storage bag
@@ -68,8 +68,8 @@ const ProductDetails = () => {
           </ul>
 
           <div>
-            <h1 className="text-[28px] font-[600]">Note:</h1>
-            <ul className="list-disc text-[18px] min-[1724px]:text-[24px] px-4">
+            <h1 className="text-[18px] lg:text-[28px] font-[600]">Note:</h1>
+            <ul className="list-disc lg:text-[18px] min-[1724px]:text-[24px] px-4">
               <li>Please allow slightly error due to manual measurement.</li>
               <li>
                 Due to the difference between different monitors, the picture
@@ -80,21 +80,21 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px] mb-[70px]">
-          <h1 className="font-[700] text-[28px] min-[1724px]:text-[40px] pb-[50px]">
+        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px] mb-[24px] lg:mb-[70px]">
+          <h1 className="font-[700] text-[20px] font-benz lg:text-[28px] min-[1724px]:text-[40px] pb-[50px]">
             Specifications
           </h1>
 
-          <div className="grid grid-cols-2 h-full gap-[20px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-[20px]">
             <div className="col-span-1 border-[1px] rounded-[12px]">
-              <div className="border-b-[1px] rounded-b-[12px] px-[44px] py-[30px]">
-                <h1 className="text-[26px] min-[1724px]:text-[32px] font-[700]">
+              <div className="border-b-[1px] rounded-b-[12px] px-[18px] lg:px-[44px] py-[18px] lg:py-[30px]">
+                <h1 className="text-[18px] lg:text-[26px] min-[1724px]:text-[32px] font-[700]">
                   KEY FEATURES
                 </h1>
               </div>
 
-              <div className="px-[44px] pb-[126px] pt-[65px]">
-                <ul className="list-disc text-[18px] min-[1724px]:text-[24px] px-4">
+              <div className="px-[44px] pb-[30px] lg:pb-[126px] pt-[30px] lg:pt-[65px]">
+                <ul className="list-disc lg:text-[18px] min-[1724px]:text-[24px] lg:px-4">
                   <li>SKU: GE779LS4UZWFWNAFAMZ </li>
                   <li>Model: N/A </li>
                   <li>Production Country: China</li>
@@ -106,14 +106,14 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className="col-span-1 border-[1px] rounded-[12px]">
-              <div className="border-b-[1px] rounded-b-[12px] px-[44px] py-[30px]">
-                <h1 className="text-[26px] min-[1724px]:text-[32px] font-[700]">
+              <div className="border-b-[1px] rounded-b-[12px] px-[18px] lg:px-[44px] py-[18px] lg:py-[30px]">
+                <h1 className="text-[18px] lg:text-[26px] min-[1724px]:text-[32px] font-[700]">
                   WHAT&apos;S IN THE BOX
                 </h1>
               </div>
 
-              <div className="px-[44px] pb-[126px] pt-[65px]">
-                <ul className="list-disc text-[18px] min-[1724px]:text-[24px] px-4">
+              <div className="px-[44px] pb-[30px] lg:pb-[126px] pt-[30px] lg:pt-[65px]">
+                <ul className="list-disc lg:text-[18px] min-[1724px]:text-[24px] lg:px-4">
                   <li>1 Piece of dog cage and hanging organizer bag</li>
                 </ul>
               </div>
@@ -121,28 +121,29 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px] mb-[70px]">
-          <h1 className="font-[700] text-[28px] min-[1724px]:text-[40px] pb-[55px]">
+        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px] mb-[24px] lg:mb-[70px]">
+          <h1 className="font-[700] text-[20px] font-benz text-center lg:text-left lg:text-[28px] min-[1724px]:text-[40px] pb-[32px] lg:pb-[55px]">
             Customer Reviews
           </h1>
 
           <div className="border-b-[1px] border-b-[#736E6F] pb-[30px]">
-            <p className="text-center text-[18px] min-[1724px]:text-[24px]">
+            <p className="text-center lg:text-[18px] min-[1724px]:text-[24px]">
               No Reviews yet
             </p>
           </div>
-          <div className="pt-[50px]">
-            <h2 className="text-[26px] min-[1724px]:text-[32px] font-[700] pb-[45px]">
+          <div className="pt-[20px] lg:pt-[50px]">
+            <h2 className="text-[18px] text-center lg:text-left lg:text-[26px] min-[1724px]:text-[32px] font-[700] pb-[45px]">
               Be the first to Review{" "}
             </h2>
-            <p className="text-[26px] min-[1724px]:text-[32px] font-[700]">
+            <p className="text-[18px] lg:text-[26px] min-[1724px]:text-[32px] font-[700]">
               Your Rating
             </p>
 
-            <div className="flex justify-start items-center gap-1 py-[30px]">
+            <div className="flex justify-start items-center gap-1 pt-[8px] pb-[22px] lg:pt-[30px] lg:pb-[30px]">
               <svg
                 width="40"
                 height="38"
+                className="w-[28px] lg:w-[40px]"
                 viewBox="0 0 40 38"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +157,7 @@ const ProductDetails = () => {
               <svg
                 width="40"
                 height="38"
+                className="w-[28px] lg:w-[40px]"
                 viewBox="0 0 40 38"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -169,6 +171,7 @@ const ProductDetails = () => {
               <svg
                 width="40"
                 height="38"
+                className="w-[28px] lg:w-[40px]"
                 viewBox="0 0 40 38"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -182,6 +185,7 @@ const ProductDetails = () => {
               <svg
                 width="40"
                 height="38"
+                className="w-[28px] lg:w-[40px]"
                 viewBox="0 0 40 38"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -195,6 +199,7 @@ const ProductDetails = () => {
               <svg
                 width="40"
                 height="38"
+                className="w-[28px] lg:w-[40px]"
                 viewBox="0 0 40 38"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -207,41 +212,41 @@ const ProductDetails = () => {
               </svg>
             </div>
 
-            <p className="text-[26px] min-[1724px]:text-[32px] font-[700]">
+            <p className="text-[18px] lg:text-[26px] min-[1724px]:text-[32px] font-[700]">
               Your Review
             </p>
 
             <textarea
               name=""
-              className="w-full bg-[#DBEEFF] dark:bg-[#003666] h-[230px] mt-[45px] outline-none p-5"
+              className="w-full bg-[#DBEEFF] dark:bg-[#003666] h-[135px] lg:h-[230px] mt-[20px] lg:mt-[45px] outline-none p-4 lg:p-5"
               id=""
             ></textarea>
 
-            <div className="w-full flex justify-end mt-[32px]">
-              <div className="flex justify-end items-center w-[20%]">
+            <div className="w-full flex justify-center lg:justify-end mt-[20px] lg:mt-[32px]">
+              <div className="flex justify-end items-center lg:w-[20%]">
                 <Button text={"Submit"} />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px] mb-[70px]">
-          <div className="flex justify-between items-center w-full  pb-[70px]">
-            <h1 className="font-[700] text-[28px] min-[1724px]:text-[40px]">
+        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[16px] lg:px-[20px] rounded-[20px] mb-[24px] lg:mb-[70px]">
+          <div className="flex justify-between items-center w-full pb-[20px] lg:pb-[70px]">
+            <h1 className="font-[700] text-[20px] font-benz lg:text-[28px] min-[1724px]:text-[40px]">
               You may also like{" "}
             </h1>
 
             <Link
               href={"/"}
-              className="text-[18px] min-[1724px]:text-[24px] font-[700] flex justify-center gap-3 items-center"
+              className="text-[14px] lg:text-[18px] min-[1724px]:text-[24px] font-[700] flex justify-center gap-1 lg:gap-3 items-center"
             >
               See All <FaArrowRight />
             </Link>
           </div>
 
-          <div className="flex justify-between items-center gap-5">
+          <div className="flex justify-between flex-wrap lg:flex-nowrap items-center gap-2 lg:gap-5">
             {items.map((item, index) => (
-              <div key={index} className="font-quicksand">
+              <div key={index} className="w-[45%] font-quicksand">
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -262,23 +267,23 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[20px] rounded-[20px]">
-          <div className="flex justify-between items-center w-full  pb-[70px]">
-            <h1 className="font-[700] text-[28px] min-[1724px]:text-[40px]">
+        <div className="border-[#0087FF] dark:border-[#003666] border-[2px] py-[30px] px-[16px] lg:px-[20px] rounded-[20px]">
+          <div className="flex justify-between items-center w-full pb-[20px] lg:pb-[70px]">
+            <h1 className="font-[700] text-[19px] font-benz lg:text-[28px] min-[1724px]:text-[40px]">
               More From this Vendor
             </h1>
 
             <Link
               href={"/"}
-              className="text-[18px] min-[1724px]:text-[24px] font-[700] flex justify-center gap-3 items-center"
+              className="text-[14px] lg:text-[18px] min-[1724px]:text-[24px] font-[700] flex justify-center gap-1 lg:gap-3 items-center"
             >
               See All <FaArrowRight />
             </Link>
           </div>
 
-          <div className="flex justify-between items-center gap-5">
+          <div className="flex justify-between flex-wrap lg:flex-nowrap items-center gap-2 lg:gap-5">
             {items.map((item, index) => (
-              <div key={index} className="font-quicksand">
+              <div key={index} className="w-[45%] font-quicksand">
                 <Image
                   src={item.src}
                   alt={item.alt}
