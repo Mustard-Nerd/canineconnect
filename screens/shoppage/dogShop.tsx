@@ -142,7 +142,7 @@ export default function DogShopScreen() {
             <div className=" pb-12 border-b ">
               <div className=" text-[24px]  pb-3">CATEGORY</div>
               <div className=" flex flex-col text-[18px] gap-2 pl-2 cursor-pointer">
-              {(data?.list).map((item:any, index:any) => (
+              {Array.isArray(data?.list) && data.list.map((item:any, index:any) => (
                 <div key={index}>{item}</div>
               ))}
               </div>
@@ -231,7 +231,7 @@ export default function DogShopScreen() {
             <div className="pb-6 font-benz font-[700] text-[24px] lg:text-[40px]">Great Dane
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 w-full gap-x-5 gap-y-12">
-              {items.map((item, index) => (
+              {items?.map((item, index) => (
                 <div key={index} className="font-quicksand w-full group">
                   <div className="overflow-hidden rounded-[15px]">
                     <Image

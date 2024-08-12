@@ -1,7 +1,7 @@
 import DogShopScreen from "@/screens/shoppage/dogShop";
 
 
-export default function ShopPage() {
+export default function DogPage() {
 
 
   return (

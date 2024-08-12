@@ -1,7 +1,7 @@
 import AccessoriesShopScreen from "@/screens/shoppage/accessoriesShop";
 
 
-export default function ShopPage() {
+export default function AccessoriesPage() {
 
 
   return (

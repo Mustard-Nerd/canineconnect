@@ -1,7 +1,7 @@
 import FeedShopScreen from "@/screens/shoppage/feedShop";
 
 
-export default function ShopPage() {
+export default function FeedPage() {
 
 
   return (
