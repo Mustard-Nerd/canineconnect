@@ -22,6 +22,8 @@ import Link from "next/link";
 import { Footer3 } from "@/components/layout/footer3";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
+import { useMyContext } from "@/contex/MyContex";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 
@@ -225,26 +227,32 @@ const items3 = [
 const Doglist = [
   {
     title: "WORKING DOGS",
+    href:"/dog",
     list: ["Akita", "Great Dane", "Boxer", "Rotweiller", "Bull Mastiff", "Bull Mastiff", "Husky"]
   },
   {
     title: "HOUND DOGS",  
+    href:"/dog",
     list: ["Beagle", "Dachshund", "Greyhound", "Whippet"]
   },
   {
     title: "HERDING DOGS",
+    href:"/dog",
     list: ["German Shephard", "Corgie", "Collie",]
   },
   {
     title: "SPORTING DOGS",
+    href:"/dog",
     list: ["Labrador retriever", "Golden Retriever", "Cocker Spaniel",]
   },
   {
     title: "TOY DOGS",
+    href:"/dog",
     list: ["Pomeranian", "Chihuahua", "Maltese",]
   },
   {
     title: "NON-SPORTING DOGS",
+    href:"/dog",
     list: ["Poodle", "Chow Chow", "Dalmatian", "French Bulldog",]
   },
 ]
@@ -252,26 +260,32 @@ const Doglist = [
 const Feedlist = [
   {
     title: "DRY", 
+    href:"/feeds",
     list: ["Traditionally extruded", "Baked", "Raw Coated",]
   },
   {
     title: "WET",  
+    href:"/feeds",
     list: ["Canned", "Dog Food Pouches", "Tetra Packs",]
   },
   {
     title: "DEHYDRATED",
+    href:"/feeds",
     list: ["Ready-to-eat", "Just add water"]
   },
   {
     title: "OTHERS",
+    href:"/feeds",
     list: ["Freeze-dried", "Raw"]
   },
   {
     title: "SHOP BY AGE",
+    href:"/feeds",
     list: ["Puppy", "Young Dogs", "Adult Dogs","Senior Dogs"]
   },
   {
     title: "TOP BRAND",
+    href:"/feeds",
     list: ["Spectrum", "reflex", "Nature’s Protection", "Araton", "Proline",]
   },
 ]
@@ -279,26 +293,32 @@ const Feedlist = [
 const Acessorieslist = [
   {
     title: "LIVELIHOOD",
+    href:"/accessories",
     list: ["Bowls", "Colars", "Leashes", "Harnesses", "Dog Ramps",]
   },
   {
     title: "GROOMING",
+    href:"/accessories",
     list: ["Clippers and Scissors", "Soaps and Shampoo", "Towels", "Shower Heads", "Bath tubs"]
   },
   {
     title: "TRAVEL & CARS",
+    href:"/accessories",
     list: ["Carriers", "Dryers", "Strollers",]
   },
   {
     title: "KENNEL",
+    href:"/accessories",
     list: ["Crates", "Crate bedding", "Crate set", "Beds and beddings", "Cushions", "Barrier Rugs"]
   },
   {
     title: "TOYS",
+    href:"/accessories",
     list: ["Interactive toys", "Chew toys", "Cooling Toys", "Swimming toys"]
   },
   {
-    title: "CLOTHING", 
+    title: "CLOTHING",
+    href:"/accessories", 
     list: ["Jackets", "Bandannas", "Costumes", "Life Vests",]
   },
 ]
@@ -307,6 +327,7 @@ const Acessorieslist = [
 type Category = {
   title: string;
   list: string[];
+  href: string;
 };
 
 export default function ShopScreen() {
@@ -319,6 +340,12 @@ export default function ShopScreen() {
     setIsModalVisible(true);
   };
 
+  const { setData } = useMyContext();
+
+  const handleClick = (category:any) => {
+    setData(category);
+  };
+
   return (
     <div>
       <div className="px-4  sm:px-[30px] xl:px-[150px] 2xl:px-[200px] py-8 w-full flex flex-col">
@@ -328,27 +355,36 @@ export default function ShopScreen() {
               className="flex flex-col justify-center px-4 py-6 sm:px-4 sm:py-6  h-[320px]   gap-3 dark:bg-darkbg bg-primaryD rounded-lg cursor-pointer"
             >
               <div 
-                className="flex items-center gap-6"
+                className="flex items-center gap-6 w-full group"
                 onMouseEnter={() => handleMouseEnter(Doglist)}
               >
-                <Image src="/shop/dog.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
-                <div>Dogs</div>
+                <div className="flex items-center gap-4 flex-grow">
+                  <Image src="/shop/dog.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <div>Dogs</div>
+                </div>
+                <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
 
               <div 
-                className="flex items-center gap-6"
+                className="flex items-center gap-6 group"
                 onMouseEnter={() => handleMouseEnter(Feedlist)}
               >
-                <Image src="/shop/feed.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
-                <div>Dog Feed</div>
+                <div className="flex items-center gap-4 flex-grow">
+                  <Image src="/shop/feed.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <div>Dog Feed</div>
+                </div>
+                <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
 
               <div 
-                className="flex items-center gap-6"
+                className="flex items-center gap-6 group"
                 onMouseEnter={() => handleMouseEnter(Acessorieslist)}
               >
-                <Image src="/shop/bone.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
-                <div>Accessories</div>
+                <div className="flex items-center gap-4 flex-grow">
+                  <Image src="/shop/bone.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <div>Accessories</div>
+                </div>
+                <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
             </div>
 
@@ -415,7 +451,7 @@ export default function ShopScreen() {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
                   {currentList.map((category, index) => (
                       <div key={index}>
-                        <div className="font-bold text-[18px] 2xl:text-[24px] underline mb-2">{category.title}</div>
+                        <Link href={category.href} onClick={() => handleClick(category)} className="font-bold text-[18px] 2xl:text-[24px] underline mb-2">{category.title}</Link>
                         <ul className="list-disc list-inside space-y-1 text-[14px] 2xl:text-[16px]">
                           {category.list.map((item, itemIndex) => (
                             <li key={itemIndex} className="cursor-pointer">
@@ -472,23 +508,23 @@ export default function ShopScreen() {
                   </div>
                 </div>
                 <div className=" group-hover:flex hidden text-white font-semibold duration-700 transition-shadow ease-in-out">
-                  <Link href="/shop/dog"  className="max-w-[170px] py-1 lg:py-2 px-3 text-[10px] lg:text-[16px] bg-secondary text-center rounded-xl" >Select Options</Link>
+                  <Link href="/shop"  className="max-w-[170px] py-1 lg:py-2 px-3 text-[10px] lg:text-[16px] bg-secondary text-center rounded-xl" >Select Options</Link>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div>
-          <ShoppingList items={items1} title="Top Selling Breeds" />
+        <div className=" mt-10 lg:mt-20">
+          <ShoppingList items={items1} title="Top Selling Breeds" border="border" />
         </div>
 
-        <div>
-          <ShoppingList items={items2} title="Highly Nutritious Feed" />
+        <div className=" my-10 lg:my-20 ">
+          <ShoppingList items={items2} border="border" title="Highly Nutritious Feed" />
         </div>
 
         <div className=" mb-10 lg:mb-20">
-          <ShoppingList items={items3} title="Exotic toys, grooming products, and lots more. . ." />
+          <ShoppingList items={items3} border="border" title="Exotic toys, grooming products, and lots more. . ." />
         </div>
 
       </div>

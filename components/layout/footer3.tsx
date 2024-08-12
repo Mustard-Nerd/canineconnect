@@ -40,35 +40,49 @@ export function Footer3() {
   ];
 
   return (
-    <div className="relative font-quicksand overflow-hidden w-full py-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10 dark:bg-primary">
+    <div className="relative font-quicksand overflow-hidden w-full py-10 px-4 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10 dark:bg-primary">
       <div className="grid grid-cols-2 h-full relative">
         <div className="col-span-1">
           <Image
             src="/foot3.svg"
             alt="blackdog"
-            className="w-full"
-            width={1000}
-            height={370}
+            className="w-full "
+            width={750}
+            height={600}
           />
         </div>
-        <div className="col-span-1 bg-[#FFB900] dark:bg-[#B38100] rounded-tr-[20px] rounded-br-[20px] flex justify-center items-center flex-col">
-          <div className="text-center font-benz text-[20px] sm:text-[30px] min-[1724px]:text-[48px] font-bold pb-4">
+        <div className="col-span-1 bg-[#FFB900] dark:bg-[#B38100] rounded-tr-[10px] rounded-br-[10px] lg:rounded-tr-[20px] lg:rounded-br-[20px] flex justify-center items-center flex-col">
+          <div className="text-center font-benz text-[18px] sm:text-[20px] px-1 lg:text-[30px] 2xl:text-[48px] font-bold sm:pb-4">
             Fill up your feed with some of this cuteness
           </div>
 
-          <div className="mt-6 flex gap-10 items-center ">
+          <div className="mt-6 flex gap-5 lg:gap-10 items-center ">
             <Image
               src="/insta.png"
               alt="blackdog"
-              className="rounded-[10px] "
+              className="rounded-[10px] hidden lg:flex "
+              width={90}
+              height={30}
+            />
+            <Image
+              src="/insta.png"
+              alt="blackdog"
+              className="rounded-[10px] lg:hidden flex "
+              width={30}
+              height={30}
+            />
+            <Image
+              src="/twitter.png"
+              alt="blackdog"
+              className="rounded-[10px] hidden lg:flex "
               width={90}
               height={30}
             />
             <Image
               src="/twitter.png"
               alt="blackdog"
-              className="rounded-[10px] "
-              width={90}
+              className="rounded-[10px] lg:hidden flex "
+              width={30}
               height={30}
             />
           </div>
