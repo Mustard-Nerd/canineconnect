@@ -40,35 +40,49 @@ export function Footer3() {
   ];
 
   return (
-    <div className="relative font-quicksand overflow-hidden w-full px-4 pb-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10 dark:bg-primary">
+    <div className="relative font-quicksand overflow-hidden w-full py-10 px-4 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10 dark:bg-primary">
       <div className="grid grid-cols-2 h-full relative">
         <div className="col-span-1">
           <Image
             src="/foot3.svg"
             alt="blackdog"
-            className="w-full"
-            width={1000}
-            height={370}
+            className="w-full "
+            width={750}
+            height={600}
           />
         </div>
-        <div className="col-span-1 bg-[#FFB900] dark:bg-[#B38100] rounded-tr-[5px] lg:rounded-tr-[20px] rounded-br-[5px] lg:rounded-br-[20px] flex justify-center items-center flex-col">
-          <div className="text-center font-benz text-[18px] sm:text-[30px] min-[1724px]:text-[48px] font-bold px-[10px] lg:pb-4">
+        <div className="col-span-1 bg-[#FFB900] dark:bg-[#B38100] rounded-tr-[10px] rounded-br-[10px] lg:rounded-tr-[20px] lg:rounded-br-[20px] flex justify-center items-center flex-col">
+          <div className="text-center font-benz text-[18px] sm:text-[20px] px-1 lg:text-[30px] 2xl:text-[48px] font-bold sm:pb-4">
             Fill up your feed with some of this cuteness
           </div>
 
-          <div className="mt-[10px] lg:mt-6 flex gap-[18px] lg:gap-10 items-center ">
+          <div className="mt-6 flex gap-5 lg:gap-10 items-center ">
             <Image
               src="/insta.png"
               alt="blackdog"
-              className="rounded-[10px] w-[28px] lg:w-[90px]"
+              className="rounded-[10px] hidden lg:flex "
+              width={90}
+              height={30}
+            />
+            <Image
+              src="/insta.png"
+              alt="blackdog"
+              className="rounded-[10px] lg:hidden flex "
+              width={30}
+              height={30}
+            />
+            <Image
+              src="/twitter.png"
+              alt="blackdog"
+              className="rounded-[10px] hidden lg:flex "
               width={90}
               height={30}
             />
             <Image
               src="/twitter.png"
               alt="blackdog"
-              className="rounded-[10px] w-[28px] lg:w-[90px]"
-              width={90}
+              className="rounded-[10px] lg:hidden flex "
+              width={30}
               height={30}
             />
           </div>
@@ -80,7 +94,7 @@ export function Footer3() {
           <div className="font-benz text-[20px] sm:text-center sm:text-[45px] text-center font-[850] pb-4 mt-10 min-[1724px]:text-[64px]">
             Stay Ahead of the Pack;
           </div>
-          <div className="lg:w-[45%] font-quicksand sm:py-4 font-[700] text-center text-[16px] min-[1724px]:text-[32px] ">
+          <div className="w-[45%] font-quicksand sm:py-4 font-[700] text-center text-[24px] min-[1724px]:text-[32px] ">
             Sign up to our newsletter to get updates on exclusive deals, tips,
             and updates for dog Lovers!
           </div>
@@ -91,12 +105,7 @@ export function Footer3() {
               className="border-[2px] rounded-[18px] bg-white border-[#121212] dark:border-[#FFFFFF] dark:bg-primary h-[50px] w-full font-bold px-5"
             />
             <fieldset className="flex justify-start items-start gap-1">
-              <input
-                type="checkbox"
-                name=""
-                id="check"
-                className="w-[30px] h-[30px] lg:w-[50px]"
-              />
+              <input type="checkbox" name="" id="check" />
               <label
                 htmlFor="check"
                 className="font-quicksand sm:text-left font-normal lg:text-[15px] text-[13px]"
@@ -115,7 +124,7 @@ export function Footer3() {
         </div>
 
         <div className=" flex flex-col sm:flex-row justify-between gap-10 sm:gap-5 items-bottom mt-12">
-          <div className="lg:pl-9 text-center lg:pr-3 py-[12px] lg:py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] flex flex-col justify-center ">
+          <div className="pl-9 pr-3 py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] flex flex-col justify-center ">
             <div className=" font-benz font-bold lg:text-[32px] text-[22px] ">
               FAQs
             </div>
@@ -123,7 +132,7 @@ export function Footer3() {
               Answers to all your questions.
             </div>
           </div>
-          <div className="lg:pl-9 text-center lg:pr-3 py-[12px] lg:py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] flex flex-col justify-center">
+          <div className="pl-9 pr-3 py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] flex flex-col justify-center">
             <div className=" font-benz font-bold lg:text-[32px] text-[22px] ">
               Testimonials
             </div>
@@ -131,7 +140,7 @@ export function Footer3() {
               Users don&apos;t lie, check our reviews here.
             </div>
           </div>
-          <div className="lg:pl-9 text-center lg:pr-3 py-[12px] lg:py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] ">
+          <div className="pl-9 pr-3 py-[36px] w-full border border-[#121212] dark:border-[#FFFFFF] rounded-[10px] sm:rounded-b-[10px] ">
             <div className=" font-benz font-bold lg:text-[32px] text-[22px] ">
               Need help ?
             </div>

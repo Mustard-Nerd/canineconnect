@@ -29,7 +29,7 @@ const SearchInput: React.FC<SearchInputProps> = ({ onSearch, placeholder = "Sear
           value={query}
           onChange={handleInputChange}
           placeholder={placeholder}
-          className="w-full pl-12 pr-12 py-[10px]  border bg-white dark:bg-primary border-primary dark:border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+          className="w-full pl-12 pr-12 py-[10px]  border bg-white dark:bg-primary border-primary dark:border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-primary"
         />
         <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-primary dark:text-gray-400">
           <FaSearch />

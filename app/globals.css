@@ -113,6 +113,21 @@ input:focus {
 }
 
 
+/* Global CSS file or Tailwind custom styles */
+input[type="checkbox"]:checked + label .w-6 {
+  background-color: white; /* Keep the background color white */
+  border-color: transparent; /* Remove border color */
+}
+
+input[type="checkbox"]:checked + label svg {
+  display: block; /* Show the checkmark */
+}
+
+input[type="checkbox"]:not(:checked) + label svg {
+  display: none; /* Hide the checkmark when not checked */
+}
+
+
 
 
 @keyframes bounce-once {

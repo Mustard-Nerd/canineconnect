@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout";
 import { Footer } from "@/components/layout/footer";
 import { Providers } from "./themeProvider";
+import { MyProvider } from "@/contex/MyContex";
 
 export const metadata: Metadata = {
   title: "Canine-Connect",
@@ -35,13 +36,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="dark"   suppressHydrationWarning>
       <body  className={local.className}>
         <Providers>
-          <nav className='sticky top-0 z-40'>
-            <Navbar />
-          </nav>
-          <div className=" z-10">{children}</div>
-          <footer>
-            <Footer />
-          </footer>
+          <MyProvider>
+            <nav className='sticky top-0 z-40'>
+              <Navbar />
+            </nav>
+            <div className=" z-10">{children}</div>
+            <footer>
+              <Footer />
+            </footer>
+            </MyProvider>
         </Providers>
       </body>
     </html>

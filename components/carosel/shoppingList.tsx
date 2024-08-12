@@ -12,12 +12,13 @@ type Item = {
 
 type ShoppingListProps = {
   items: Item[];
-  title: string;
+  title ?: string;
+  border ?: string;
 };
 
-const ShoppingList: React.FC<ShoppingListProps> = ({ items, title }) => {
+const ShoppingList: React.FC<ShoppingListProps> = ({ items, title, border }) => {
   return (
-    <div className="mt-10 lg:mt-20 border border-border p-4 lg:px-5 lg:py-8 rounded-[10px]">
+    <div className={` ${border} border-border p-4 lg:px-5 lg:py-8 rounded-[10px] `}>
       <div className="pb-6 font-benz font-[700] text-[24px] lg:text-[44px]">{title}</div>
       <div className="grid grid-cols-2 sm:grid-cols-4 w-full gap-x-5 gap-y-12">
         {items.map((item, index) => (
@@ -26,7 +27,7 @@ const ShoppingList: React.FC<ShoppingListProps> = ({ items, title }) => {
               <Image
                 src={item.src}
                 alt={item.alt}
-                className="rounded-[10px] w-full transform transition-transform duration-700 lg:group-hover:scale-105  lg:group-hover:-translate-y-[-16px]  group-hover:-translate-y-[-4px]"
+                className="rounded-[10px] w-full transform transition-transform duration-700 lg:group-hover:scale-105  lg:group-hover:-translate-y-[16px]  group-hover:-translate-y-[4px]"
                 width={320}
                 height={325}
               />

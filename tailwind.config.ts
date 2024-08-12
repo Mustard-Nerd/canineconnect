@@ -24,7 +24,9 @@ const config: Config = {
         textdarkgrey: "#1F323F",
         dropshadow: "#6E61CA20",
         darkbg:"#003666",
-        border: "#497BFF"
+        border: "#497BFF",
+        blue:"#DBEEFE",
+        yellow:"#FBBA32"
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
