@@ -117,7 +117,7 @@ export function Footer2() {
           </div>
           <div className="pl-9 pr-3 py-[36px]   w-full border sm:border-0 rounded-[10px] border-secondary sm:rounded-b-[10px] dropshadow3 ">
             <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">Need help ?</div>
-            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">Contact us</div>
+            <Link href="/contact" className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">Contact us</Link>
           </div>
         </div>
       </div>

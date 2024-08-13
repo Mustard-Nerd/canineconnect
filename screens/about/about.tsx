@@ -171,7 +171,7 @@ function AboutScreen() {
 
         <div className="flex justify-center items-center gap-[185px]">
           <Button text="CHAT WITH US" className="w-[160px]" />
-          <Button text="CONTACT US" className="w-[160px]" />
+          <Button text="CONTACT US" href="/contact" className="w-[160px]" />
         </div>
       </div>
 

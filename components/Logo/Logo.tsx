@@ -36,7 +36,7 @@ export const Logo = ({ href = '/', w = 350 }: ComponentProps) => {
         <Image
           src="/canine-connectD.svg"
           alt="Canine-Connect logo"
-          className=' w-[250px] lg:w-[350px]'
+          className=' w-[200px] lg:w-[350px]'
           width={w}
           height={height}
         />
@@ -45,7 +45,7 @@ export const Logo = ({ href = '/', w = 350 }: ComponentProps) => {
         <Image
           src="/canine-connect.svg"
           alt="Canine-Connect logo"
-          className=' w-[250px] lg:w-[350px]'
+          className=' w-[200px] lg:w-[350px]'
           width={w}
           height={height}
         />
