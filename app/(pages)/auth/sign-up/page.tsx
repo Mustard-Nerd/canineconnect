@@ -24,16 +24,16 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className=" min-h-screen w-full grid grid-cols-2 relative z-0 dark:bg-[#121212]">
-        <div className="col-span-1 relative">
+      <div className="  w-full flex relative z-0 dark:bg-[#121212]">
+        <div className=" hidden lg:flex w-1/2 relative">
           <Image
             src={"/signUp.svg"}
             className="w-full h-full object-cover"
-            width={40}
-            height={40}
+            width={870}
+            height={1000}
             alt=""
           />
-          <div className="bg-[#11224059] w-[60%] absolute bottom-0 right-0 py-[42px] pr-[45px] pl-[30px] rounded-tl-[15px] rounded-bl-[15px]">
+          <div className="bg-[#11224059] w-[80%] xl:w-[60%] absolute bottom-0 right-0 py-[42px] pr-[45px] pl-[30px] rounded-tl-[15px] rounded-bl-[15px]">
             <p className="text-[20px] font-[400] font-quicksand leading-[24px] text-right text-white">
               We prioritize the safety of our users by integrating secure
               payment gateways and providing robust support throughout the
@@ -41,11 +41,11 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="col-span-1 pt-[40px] pb-[72px] overflow-y-auto px-[120px]">
+        <div className="lg:w-1/2 w-full pt-[40px] pb-[72px] overflow-y-auto px-4 sm:px-10 xl:px-[120px]">
           <h1 className="text-[40px] leading-[48px] pb-[15px]">
             Create Account
           </h1>
-          <p className="font-quicksand text-[20px] text-[#121212] dark:text-white font-normal mb-[48px]">
+          <p className="font-quicksand text-[16px] lg:text-[20px] text-[#121212] dark:text-white font-normal mb-[48px]">
             Already have an account?{" "}
             <span>
               <Link href={"/auth/sign-in"} className="underline font-[700]">
@@ -56,7 +56,7 @@ const SignUp = () => {
 
           <form
             action=""
-            className="flex flex-col items-start w-full gap-10 font-quicksand"
+            className="flex flex-col items-start w-full  gap-5 lg:gap-10 font-quicksand"
           >
             <div className="flex flex-col w-full items-start gap-2">
               <Input
@@ -64,7 +64,7 @@ const SignUp = () => {
                 label="Username"
                 placeholder="Enter your Username"
               />
-              <p className=" text-[16px] font-[300]">
+              <p className=" text-[14px] lg:text-[16px] font-[300]">
                 No use of special characters or spaces is allowed
               </p>
             </div>
@@ -125,7 +125,7 @@ const SignUp = () => {
               />
               <label
                 htmlFor="check"
-                className="text-[18px] font-[300] leading-[36px]"
+                className="lg:text-[18px] text-[14px] font-[300] leading-[36px]"
               >
                 I agree to all{" "}
                 <span className="text-[#0046FF]">privacy policies</span> and{" "}
