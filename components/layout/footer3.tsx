@@ -195,9 +195,9 @@ export function Footer3() {
             <div className=" font-benz font-bold lg:text-[32px] text-[22px] ">
               Need help ?
             </div>
-            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">
+            <Link href="/contact" className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">
               Contact us
-            </div>
+            </Link>
           </div>
         </div>
       </div>

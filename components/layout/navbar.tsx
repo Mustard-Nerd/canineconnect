@@ -61,34 +61,44 @@ export function Navbar() {
           
         </div>
 
+        <div className="  flex flex-col gap-[4px] lg:hidden group " 
+          onClick={() => setIsSliderOpen(!isSliderOpen)}
+        >
+          <div
+            className={`w-6 h-[2px] bg-primary dark:bg-white  transition-transform duration-300 ${isSliderOpen ? 'transform rotate-45 translate-y-[6px]' : ''}`}
+          ></div>
+          <div
+            className={`w-6 h-[2px] bg-primary dark:bg-white  transition-opacity duration-300 ${isSliderOpen ? 'opacity-0' : ''}`}
+          ></div>
+          <div
+            className={`w-6 h-[2px] bg-primary dark:bg-white  transition-transform duration-300 ${isSliderOpen ? 'transform -rotate-45 -translate-y-[6px]' : ''}`}
+          ></div>
+        </div>
+
         <div
           className={` 
-            gap-5 xl:absolute xl:top-1/2 xl:left-1/2 xl:transform 
-            xl:-translate-x-1/2 xl:-translate-y-1/2 -ml-7 lg:ml-0
+            gap-5 xs:absolute xs:top-1/2 xs:left-1/2 xs:transform 
+            xs:-translate-x-1/2 xs:-translate-y-1/2 
           `}
         >
           <Logo />
         </div>
         <div className=" flex gap-[16px] items-center medium-text">
-          <div className="hidden sm:flex gap-[16px] items-center ">
-            <IoPersonSharp className="w-[30px] h-[30px]" />
-            <FaHeart className="w-[30px] h-[30px]" />
-            <IoMdCart className="w-[30px] h-[30px]" />
+          <div className="flex  gap-2 xs:gap-1 lg:gap-[16px] items-center ">
+            <IoPersonSharp className="lg:w-[30px] lg:h-[20px] xs:w-[30px] xs:h-[20px] w-[15px] h-[15px]" />
+            <FaHeart className="lg:w-[30px] lg:h-[20px] xs:w-[30px] xs:h-[20px] w-[15px] h-[15px]" />
+            <IoMdCart className="lg:w-[30px] lg:h-[20px] xs:w-[30px] xs:h-[20px] w-[15px] h-[15px] " />
           </div>
 
-          <div className="flex flex-col gap-[4px] lg:hidden group " onClick={() => setIsSliderOpen(true)}>
-            <div className="w-6 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
-            <div className="w-5 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
-            <div className="w-3 h-[2px] bg-primary dark:bg-white group-hover:bg-secondary"></div>
-          </div>
+          
         </div>
       </div>
 
 
-      <div className={`fixed top-0  right-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isSliderOpen ? "translate-x-0" : "translate-x-full"}`}>
-        <div className="flex mt-4 justify-end p-4 text-primary ">
+      <div className={`fixed top-16  left-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isSliderOpen ? "-translate-x-0" : "-translate-x-full"}`}>
+        {/* <div className="flex mt-4 justify-end p-4 text-primary ">
           <IoClose className="text-2xl cursor-pointer" onClick={() => setIsSliderOpen(false)} />
-        </div>
+        </div> */}
         <div className="flex flex-col items-start pl-6 pr-9">
           {nav.map((navItem) => (
             <Link
@@ -103,11 +113,7 @@ export function Navbar() {
             </Link>
           ))}
 
-          <div className=" sm:hidden flex pt-4 gap-[16px] items-center text-primary  ">
-            <IoPersonSharp  className="w-[20px] h-[20px]"/>
-            <FaHeart  className="w-[20px] h-[20px]" />
-            <IoMdCart className="w-[20px] h-[20px]" />
-          </div>
+          
         </div>
       </div>
     </div>
