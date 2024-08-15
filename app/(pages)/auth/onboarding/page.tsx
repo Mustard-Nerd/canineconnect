@@ -7,8 +7,8 @@ const Onboarding = () => {
 
   return (
     <>
-      <div className=" w-full  grid grid-cols-2 relative z-0 dark:bg-[#121212]">
-        <div className="col-span-1 relative">
+      <div className=" w-full grid-cols-1  lg:grid lg:grid-cols-2 relative z-0 dark:bg-[#121212]">
+        <div className=" hidden lg:flexcol-span-1 relative">
           <Image
             src={"/boarding.svg"}
             className="w-full h-full object-cover"
@@ -16,7 +16,7 @@ const Onboarding = () => {
             height={40}
             alt=""
           />
-          <div className="bg-[#11224059] w-[60%] absolute bottom-0 right-0 py-[64px] pr-[45px] pl-[30px] rounded-tl-[15px] rounded-bl-[15px]">
+          <div className="bg-[#11224059] w-[80%] xl:w-[60%] absolute bottom-0 right-0 py-[64px] pr-[45px] pl-[30px] rounded-tl-[15px] rounded-bl-[15px]">
             <p className="text-[20px] font-[400] font-quicksand leading-[24px] text-right text-white">
               Canine Connect is designed with our users in mind and is very easy
               to navigate
@@ -24,10 +24,10 @@ const Onboarding = () => {
           </div>
         </div>
         <div className="col-span-1 pt-[84px] pb-[72px] flex flex-col items-center overflow-y-auto px-[30px]">
-          <h1 className="text-[64px] text-center leading-[96px] pb-[10px]">
+          <h1 className="lg:text-[64px] text-[30px] text-center lg:leading-[96px] pb-[10px]">
             Welcome to the Pack!{" "}
           </h1>
-          <p className="font-quicksand text-[32px] text-[#121212] dark:text-white text-center font-[700] mb-[50px]">
+          <p className="font-quicksand lg:text-[32px] text-[18px] text-[#121212] dark:text-white text-center font-[700] mb-[50px]">
             Help us serve you better by telling us who you are
           </p>
 
