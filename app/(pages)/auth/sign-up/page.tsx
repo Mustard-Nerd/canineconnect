@@ -7,9 +7,12 @@ import { Icon } from "react-icons-kit";
 import { useState } from "react";
 import Input from "@/components/Input/Input";
 import Button from "@/components/button/button";
+import PhoneInput from 'react-phone-number-input'
+
 
 const SignUp = () => {
   const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
   const [type, setType] = useState("password");
   const [icon, setIcon] = useState(eyeOff);
 
@@ -22,10 +25,18 @@ const SignUp = () => {
       setType("password");
     }
   };
+
+
+  const handlePhoneChange = (phone?: any) => {
+    setPhone(phone || '');
+  };
+
+
+
   return (
     <>
-      <div className="  w-full flex relative z-0 dark:bg-[#121212]">
-        <div className=" hidden lg:flex w-1/2 relative">
+      <div className=" lg:h-screen  w-full flex relative z-0 dark:bg-[#121212]">
+        <div className=" hidden  lg:flex w-1/2 relative">
           <Image
             src={"/signUp.svg"}
             className="w-full h-full object-cover"
@@ -41,8 +52,8 @@ const SignUp = () => {
             </p>
           </div>
         </div>
-        <div className="lg:w-1/2 w-full pt-[40px] pb-[72px] overflow-y-auto px-4 sm:px-10 xl:px-[120px]">
-          <h1 className="text-[40px] leading-[48px] pb-[15px]">
+        <div className="lg:w-1/2 w-full pt-[40px] pb-[72px] custom-scrollbar lg:overflow-y-auto px-4 sm:px-10 xl:px-[120px]">
+          <h1 className="lg:text-[60px] text-[40px] leading-[48px] pb-[15px]">
             Create Account
           </h1>
           <p className="font-quicksand text-[16px] lg:text-[20px] text-[#121212] dark:text-white font-normal mb-[48px]">
@@ -73,13 +84,23 @@ const SignUp = () => {
               label="Email Address"
               placeholder="Enter your email address"
             />
-            <Input
-              id="phone"
-              type="number"
-              label="Phone Number"
-              placeholder="Phone Number"
-            />
-            <fieldset className="relative flex flex-col w-full items-start gap-2">
+
+            <fieldset className={`flex flex-col font-normal w-full items-start gap-2 `}>
+              <label  className="text-[20px] leading-[36px]">
+                Phone Number
+              </label>
+              
+              <PhoneInput
+                placeholder="Enter phone number"
+                defaultCountry="NG"
+                international
+                countryCallingCodeEditable={false}
+                value={phone}
+                onChange={handlePhoneChange}
+                className="w-full dropshadowinpute flex items-center bg-white dark:bg-primary border-2 dark:border-white border-primary rounded-[8px] h-[50px] text-[20px] placeholder:text-[18px] text-[#121212] dark:text-white focus:outline-none focus:border-[#0046FF] overflow-hidden"
+              />
+            </fieldset>
+            <div className="relative flex flex-col w-full items-start gap-2">
               
               <div className="relative w-full">
                 <Input
@@ -99,29 +120,29 @@ const SignUp = () => {
               </div>
               <div className="flex w-full flex-col items-start gap-[10px]">
                 <div className="flex justify-between items-center w-full">
-                  <p className="text-[16px] font-[300] text-[#121212] w-1/2">
+                  <p className="text-[16px] font-[300] w-1/2">
                     x 8 characters minimum
                   </p>
-                  <p className="text-[16px] font-[300] text-[#121212] w-1/2">
+                  <p className="text-[16px] font-[300] w-1/2">
                     x 1 uppercase character{" "}
                   </p>
                 </div>
                 <div className="flex justify-between items-center w-full">
-                  <p className="text-[16px] font-[300] text-[#121212] w-1/2">
+                  <p className="text-[16px] font-[300] w-1/2">
                     x 1 number{" "}
                   </p>
-                  <p className="text-[16px] font-[300] text-[#121212] w-1/2">
+                  <p className="text-[16px] font-[300] w-1/2">
                     x 1 special character{" "}
                   </p>
                 </div>
               </div>
-            </fieldset>
+            </div>
 
             <fieldset className="flex justify-start items-center gap-[16px] pb-2 w-full pl-[18px]">
               <input
                 type="checkbox"
                 id="check"
-                className="h-[30px] w-[30px] bg-white text-white"
+                className="h-[20px] w-[20px] bg-white text-white"
               />
               <label
                 htmlFor="check"
@@ -139,13 +160,14 @@ const SignUp = () => {
           </div>
 
           <div className="flex justify-between items-center w-full gap-[32px] pt-[30px] pb-[30px]">
-            <div className="bg-[#121212] h-[1px] w-full"></div>
+            <div className="bg-[#121212] dark:bg-white h-[1px] w-full"></div>
             <p className="font-quicksand text-[18px] font-[700]">or</p>
-            <div className="bg-[#121212] h-[1px] w-full"></div>
+            <div className="bg-[#121212] dark:bg-white h-[1px] w-full"></div>
           </div>
 
-          <button className="font-quicksand bg-white border-[2px] border-[#0046FF] mt-2 text-[24px] font-[600]  w-full rounded-[8px] px-[18px] py-[16px] text-[#0A0A0B] leading-[21px] hover:bg-primaryD transform hover:translate-y-[-2px] transition-transform">
-            Continue with Google
+          <button className="font-quicksand flex justify-center gap-6 items-center bg-white border-[2px] border-[#0046FF] mt-2 text-[18px] lg:text-[24px] font-[600]  w-full rounded-[8px] px-[18px] py-[16px] text-[#0A0A0B] dark:bg-primary dark:text-white leading-[21px] hover:bg-primaryD transform hover:translate-y-[-2px] transition-transform">
+            <span ><Image src="/Google.svg" alt="google" width={25} height={25} /></span>
+            <span className=" ">Continue with Google</span>
           </button>
         </div>
       </div>
