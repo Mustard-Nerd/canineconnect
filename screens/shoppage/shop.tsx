@@ -21,9 +21,10 @@ import Button from "@/components/button/button";
 import Link from "next/link";
 import { Footer3 } from "@/components/layout/footer3";
 import { useState } from "react";
-import { IoClose } from "react-icons/io5";
+import { IoClose, IoFilterOutline } from "react-icons/io5";
 import { useMyContext } from "@/contex/MyContex";
 import { IoIosArrowDown } from "react-icons/io";
+import { HiOutlineAdjustmentsHorizontal, HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 
 
 
@@ -335,6 +336,8 @@ export default function ShopScreen() {
   const [isModalVisible, setIsModalVisible] = useState(false)
   const [currentList, setCurrentList] = useState<Category[] | null>(null);
 
+  
+
   const handleMouseEnter = (list: Category[]) => {
     setCurrentList(list);
     setIsModalVisible(true);
@@ -347,7 +350,7 @@ export default function ShopScreen() {
   };
 
   return (
-    <div>
+    <div className=" relative">
       <div className="px-4  sm:px-[30px] xl:px-[150px] 2xl:px-[200px] py-8 w-full flex flex-col">
         <div className=" grid grid-cols-4 gap-7 font-quicksand 2xl:text-[20px] text-[16px] font-normal">
           <div className="hidden lg:flex flex-col gap-7  ">
@@ -528,6 +531,9 @@ export default function ShopScreen() {
         </div>
 
       </div>
+
+
+      
 
       <Footer3 />
     </div>

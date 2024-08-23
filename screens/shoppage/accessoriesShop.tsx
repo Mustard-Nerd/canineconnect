@@ -7,6 +7,9 @@ import { Footer3 } from "@/components/layout/footer3";
 import { IoMdCart, IoMdCheckmark } from "react-icons/io";
 import { useState } from "react";
 import { useMyContext } from "@/contex/MyContex";
+import { IoClose, IoFilterOutline } from "react-icons/io5";
+import { MdArrowRight } from "react-icons/md";
+import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 
 
 
@@ -108,6 +111,30 @@ export default function AccessoriesShopScreen() {
 
 
   const [progress, setProgress] = useState(50);
+  const [isSortModalVisible, setSortModalVisible] = useState(false);
+  const [isFilterPanelVisible, setFilterPanelVisible] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleSortClick = () => {
+    setSortModalVisible(true);
+  };
+
+  const handleFilterClick = () => {
+    setFilterPanelVisible(true);
+  };
+
+  const closeSortModal = () => {
+    setSortModalVisible(false);
+  };
+
+  const closeFilterPanel = () => {
+    setFilterPanelVisible(false);
+  };
 
   const incrementProgress = () => {
     if (progress < 100) setProgress(progress + 10);
@@ -261,6 +288,156 @@ export default function AccessoriesShopScreen() {
           <ShoppingList items={items1}  />
         </div>
 
+      </div>
+
+      <div className="lg:hidden z-0 w-[230px]  fixed bottom-0 left-[50%] transform -translate-x-1/2 -translate-y-1/2   bg-secondary text-white flex font-bold text-[14px] items-center gap-5 font-quicksand justify-center  rounded-[20px]">
+        <div 
+          className="flex items-center pr-2 py-[15px] gap-2 border-r border-primary"
+          onClick={handleSortClick}
+        >
+          <div >Sort by</div>
+          <IoFilterOutline className="w-6 h-6" />
+        </div>
+        <div 
+          className="flex items-center gap-2 py-[15px]"
+          onClick={handleFilterClick}
+        >
+          <div>Filter</div>
+          <HiOutlineAdjustmentsVertical className="w-6 h-6" />
+        </div>
+      </div>
+
+      {isSortModalVisible && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white text-primary font-quicksand rounded-lg p-4 w-11/12 max-w-md">
+            <div className=" flex items-center justify-between mb-4">
+              <h2 className="text-xl  font-bold ">Sort By </h2>
+              <IoClose className=" -mr-1 w-6 h-6  cursor-pointer" onClick={closeSortModal} />
+            </div>
+            <ul className="space-y-4 ">
+              <li className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <label className="cursor-pointer flex-grow" htmlFor="popularity">Popularity</label>
+                <input type="radio" id="popularity" name="sort" className="cursor-pointer" />
+              </li>
+              <li className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <label className="cursor-pointer flex-grow" htmlFor="newest">Newest Arrivals</label>
+                <input type="radio" id="newest" name="sort" className="cursor-pointer" />
+              </li>
+              <li className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <label className="cursor-pointer flex-grow" htmlFor="lowToHigh">Price: Low to High</label>
+                <input type="radio" id="lowToHigh" name="sort" className="cursor-pointer" />
+              </li>
+              <li className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <label className="cursor-pointer flex-grow" htmlFor="highToLow">Price: High to Low</label>
+                <input type="radio" id="highToLow" name="sort" className="cursor-pointer" />
+              </li>
+              <li className="flex items-center justify-between border-b border-gray-300 pb-2">
+                <label className="cursor-pointer flex-grow" htmlFor="rating">Customer Rating</label>
+                <input type="radio" id="rating" name="sort" className="cursor-pointer" />
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      )}
+
+
+      <div className={`fixed inset-y-0 left-0 z-50 transform ${isFilterPanelVisible ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out  dark:bg-darkbg bg-blue text-primary dark:text-white font-quicksand w-3/4 max-w-sm shadow-lg overflow-auto`}>
+        <div className="py-6 ">
+          <div className=" flex items-center px-3 gap-8 pb-4">
+            <IoClose className="text-2xl font-normal w-11 h-11 cursor-pointer" onClick={closeFilterPanel} />
+            <h2 className="text-[30px] font-benz font-bold ">Filter </h2>
+          </div>
+
+          <div className="pb-3 pt-5 px-3 border-b border-t ">
+            <div 
+              className="text-[16px] font-[400]  cursor-pointer flex justify-between items-center"
+              onClick={toggleAccordion}
+            >
+              CATEGORY
+              <span className={`transition-transform duration-300 ${isOpen ? 'transform rotate-90' : ''}`}>
+              <MdArrowRight className=" w-5 h-5 " />
+              </span>
+            </div>
+
+            {isOpen && (
+              <div className="flex flex-col text-[18px] gap-2 pt-3 pl-2 cursor-pointer">
+                {Array.isArray(data?.list) && data.list.map((item:any, index:any) => (
+                  <div key={index}>{item}</div>
+                ))}
+              </div>
+            )}
+          </div>
+          <div className="pb-5 pt-5 px-3 border-b  ">
+            <div className=" text-[16px] font-normal pb-3" >Age </div>
+
+            <div className=" flex flex-col text-[18px] gap-2 pl-2">
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="white" >Puppy</label>
+              </div>
+              
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="black" >Young Dogs</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="brown" >Adult dogs</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="spotted" >Senior Dogs</label>
+              </div>
+            </div>
+          </div>
+
+          <div className="pb-5 pt-5 px-3 border-b  ">
+            <div className=" text-[16px] font-normal pb-5">PRICE</div>
+
+            <div className="w-full max-w-xs  text-[14px] pl-2">
+              <div className="w-full bg-[#B38120]  rounded-full h-1  mb-6">
+                <div
+                  className="bg-yellow h-1 rounded-full relative transition-all duration-200 ease-linear"
+                  style={{ width: `${progress}%` }}
+                >
+                  <div
+                    className="absolute top-[-5px] right-[-8px] bg-yellow rounded-full w-4 h-4"
+                  ></div>
+                </div>
+              </div>
+              <div className="flex justify-center cursor-pointer gap-2">
+                <button
+                  onClick={decrementProgress}
+                  className="  px-5 py-0.5 border"
+                >
+                  Min
+                </button>
+                <button
+                  onClick={incrementProgress}
+                  className=" px-5 py-0.5 border "
+                >
+                  Max
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="pb-12 px-3   pt-6">
+            <div className=" text-[16px] font-normal   pb-2">SHIPPED FROM</div>
+
+            <div className=" flex flex-col text-[18px] gap-2 pl-2">
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="brown">Abroad</label>
+              </div>
+              <div className="flex items-center">
+                <input type="checkbox" className="mr-2 w-6 h-3 outline-none appearance-none accent-white bg-white border  border-primary checked:bg-yellow " />
+                <label htmlFor="spotted">Within Nigeria</label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer3 />
