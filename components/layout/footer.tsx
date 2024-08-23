@@ -84,11 +84,11 @@ export function Footer() {
   ];
 
   return (
-    <div>
-      <div className="font-quicksand bg-white text-black dark:bg-[#121212] dark:text-white">
+    <div className=" relative z-10 dark:bg-primary bg-white overflow-hidden">
+      <div className="font-quicksand  text-black dark:text-white">
         <div
           className=" hidden
-            lg:flex  gap-20  z-40 justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
+            lg:flex  gap-20   justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
             py-16 sm:items-center relative border-t-[1px] shadow-md 
           "
         >
@@ -173,7 +173,7 @@ export function Footer() {
 
         <div
           className="lg:hidden
-            flex  sm:flex-row flex-col gap-10  sm:gap-10  z-40 justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
+            flex  sm:flex-row flex-col gap-10  sm:gap-10   justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
             py-9 sm:items-center relative border-t-[1px] shadow-md 
           "
         >
@@ -256,10 +256,10 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="font-quicksand bg-white text-black dark:bg-[#121212] dark:text-white">
+      <div className="font-quicksand  text-black dark:text-white">
         <div
           className="
-            flex flex-col sm:flex-row z-40 justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
+            flex flex-col sm:flex-row  justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
             lg:py-8 items-center relative border-t-[1px] shadow-md 
           "
         >

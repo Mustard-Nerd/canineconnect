@@ -151,12 +151,12 @@ export function Footer3() {
         </div>
       </div> */}
 
-      <div className="px-4 py-9">
+      <div className="lg:px-4 py-9">
         <div className=" flex flex-col sm:items-center">
           <div className="font-benz text-[20px] sm:text-center sm:text-[45px] text-center font-[850] pb-4 mt-10 min-[1724px]:text-[64px]">
             Stay Ahead of the Pack;
           </div>
-          <div className=" font-quicksand sm:py-4 font-normal lg:text-[15px] text-[13px] ">
+          <div className=" text-center font-quicksand sm:py-4 font-normal lg:text-[15px] text-[13px] ">
             Sign up to our newsletter to get updates on exclusive deals, tips, and updates for dog Lovers!
           </div>
           <div className=" max-w-[500px] w-full py-3">
@@ -165,9 +165,18 @@ export function Footer3() {
               placeholder="ENTER EMAIL ADDRESS"
               className="border-[2px] rounded-[15px] bg-white border-[#121212] dark:border-[#FFFFFF] dark:bg-primary h-[60px] w-full font-bold px-5"
             />
-          </div>
-          <div className=" font-quicksand py-4 max-w-[670px] sm:text-center font-normal lg:text-[15px] text-[13px] " >
-            By signing up, you consent to receiving marketing emails and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails.
+          
+            <fieldset className="flex justify-start items-start gap-2 mt-8">
+              <input type="checkbox" name="" className=" w-6 h-6 " id="check" />
+              <label
+                htmlFor="check"
+                className="font-quicksand sm:text-left font-normal lg:text-[15px] text-[13px]"
+              >
+                By signing up, you consent to receiving marketing emails and
+                acknowledge you have read our privacy policy. Unsubscribe
+                anytime at the bottom of our emails.
+              </label>
+            </fieldset>
           </div>
           <div className="mt-5 sm:mt-10 lg:w-[180px]  justify-self-center flex justify-center">
             <Button2 text="Sign Up" href="/auth/sign-up" />
