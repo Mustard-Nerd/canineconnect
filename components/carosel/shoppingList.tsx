@@ -19,7 +19,7 @@ type ShoppingListProps = {
 const ShoppingList: React.FC<ShoppingListProps> = ({ items, title, border }) => {
   return (
     <div className={` ${border} border-border p-4 lg:px-5 lg:py-8 rounded-[10px] `}>
-      <div className="pb-6 font-benz font-[700] text-[24px] lg:text-[44px]">{title}</div>
+      <div className="pb-6 font-benz font-[700] text-[24px]  lg:text-[44px]">{title}</div>
       <div className="grid grid-cols-2 sm:grid-cols-4 w-full gap-x-5 gap-y-12">
         {items.map((item, index) => (
           <div key={index} className="font-quicksand w-full group">
@@ -52,3 +52,5 @@ const ShoppingList: React.FC<ShoppingListProps> = ({ items, title, border }) => 
 };
 
 export default ShoppingList;
+
+

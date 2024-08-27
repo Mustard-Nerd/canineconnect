@@ -26,7 +26,8 @@ const config: Config = {
         darkbg:"#003666",
         border: "#497BFF",
         blue:"#DBEEFE",
-        yellow:"#FBBA32"
+        yellow:"#FBBA32",
+        orange:"#FFB900"
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
