@@ -5,9 +5,10 @@ import { Logo } from "../Logo";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { IoClose, IoPersonSharp } from "react-icons/io5";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaShopify } from "react-icons/fa";
 import { IoMdCart } from "react-icons/io";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export function Navbar() {
   const [isSliderOpen, setIsSliderOpen] = useState(false);
@@ -32,12 +33,27 @@ export function Navbar() {
     },
   ];
 
+  const menuItems1 = [
+    { src: "/menu/dog.svg", alt: "dog", label: "Dogs" , href:"/dog" },
+    { src: "/menu/feed.svg", alt: "dog feed", label: "Dog Feed", href:"/feed" },
+    { src: "/menu/accessories.svg", alt: "accessories", label: "Accessories" , href:"/accessories" },
+  ];
+
+  const menuItems = [
+    { icon: FaShopify, label: "Shop", image: null , href:"/shop" },
+    { icon: null, label: "Orders", image: "/menu/shop.svg" , href:"/orders" },
+    { icon: null, label: "Inbox", image: "/menu/mail.svg" , href:"/messages" },
+    { icon: null, label: "Voucher", image: "/menu/coupon.svg" , href:"/coupon" },
+    { icon: null, label: "Wishlist", image: "/menu/wishlist.svg" , href:"/wishlist" },
+    { icon: null, label: "Pending Reviews", image: "/menu/review.svg" , href:"/reviews" },
+  ];
+
   return (
-    <div className="font-quicksand w-full sticky top-0 z-50 bg-white dark:bg-primary">
+    <div className="font-quicksand w-full h-full sticky top-0 z-50 bg-white dark:bg-primary">
       <div
         className="
           flex justify-between p-4 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] 
-          lg:py-8 items-center relative  dropshadow 
+          lg:py-8 items-center relative  dropshadow z-40 
         "
       >
         <div className="hidden lg:flex items-center  gap-[13px] font-normal text-[15px] leading-[36px] cursor-pointer">
@@ -95,25 +111,67 @@ export function Navbar() {
       </div>
 
 
-      <div className={`fixed top-16  left-0 h-full bg-white z-50 transform transition-transform duration-300 ease-in-out ${isSliderOpen ? "-translate-x-0" : "-translate-x-full"}`}>
+      <div className={`fixed  w-[300px]  left-0 h-screen  bg-blue dark:bg-darkbg z-10 transform  pt-1 transition-transform  duration-300 ease-in-out ${isSliderOpen ? "-translate-x-0" : "-translate-x-full"}`}>
         {/* <div className="flex mt-4 justify-end p-4 text-primary ">
           <IoClose className="text-2xl cursor-pointer" onClick={() => setIsSliderOpen(false)} />
         </div> */}
-        <div className="flex flex-col items-start pl-6 pr-9">
-          {nav.map((navItem) => (
-            <Link
-              key={navItem.name}
-              href={navItem.href}
-              className={`py-2 text-[15px] ${
-                isActive(navItem.href) ? "text-secondary" : "text-primary"
-              }`}
-              onClick={() => setIsSliderOpen(false)}
-            >
-              {navItem.name}
-            </Link>
-          ))}
 
-          
+        <div className=" pl-[21px] pr-2 pb-8 w-full h-full overflow-auto">
+
+          <div className=" border-y border-primary py-2 mt-5  w-full  text-[16px] font-[500]">
+            NEED HELP?
+          </div>
+
+          <div  className=" border-b py-4 w-full border-primary">
+            <div  className="text-[16px] pb-4 font-[500]">MY CANINE ACCOUNT</div>
+            <div className="flex flex-col gap-4 text-[14px]">
+              {menuItems.map((item, index) => (
+                <Link 
+                  href={item.href} 
+                  key={index} 
+                  className={`flex items-center px-3 py-2 rounded-[3px] gap-6 w-full group ${
+                    isActive(item.href) ? "bg-orange" : ""
+                  }`}
+                  onClick={() => setIsSliderOpen(false)}
+                >
+                  <div className="flex items-center gap-4 flex-grow">
+                    {item.icon ? (
+                      <item.icon className="w-[25px] h-[25px]" />
+                    ) : (
+                      <Image src={item.image} alt={item.label} width={25} height={25} />
+                    )}
+                    <div>{item.label}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div  className=" border-b py-4 w-full border-primary">
+            <div  className="text-[16px] pb-4 font-[500]">OUR CATEGORIES</div>
+            <div className="flex flex-col gap-4 text-[14px]">
+              {menuItems1.map((item, index) => (
+                <Link 
+                  href={item.href} 
+                  key={index} 
+                  className={`flex items-center px-3 py-2 rounded-[3px] gap-6 w-full group ${
+                    isActive(item.href) ? "bg-orange" : ""
+                  }`}
+                  onClick={() => setIsSliderOpen(false)}
+                >
+                  <div className="flex items-center gap-4 flex-grow">
+                    <Image src={item.src} alt={item.alt} width={28} height={28} />
+                    <div>{item.label}</div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-[16px] font-[400] my-5 flex flex-col gap-5">
+            <div>Become a Vendor</div>
+            <div>Customer Service</div>
+          </div>
         </div>
       </div>
     </div>
