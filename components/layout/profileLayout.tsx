@@ -37,10 +37,10 @@ const items1 = [
 
 const menuItems = [
   { label: "My Canine Account", image: "/menu/person.svg", href: "/buyer/profile" },
-  { label: "Orders", image: "/menu/shop.svg", href: "/orders" },
-  { label: "Notifications", image: "/menu/mail.svg", href: "/messages" },
-  { label: "Voucher", image: "/menu/coupon.svg", href: "/coupon" },
-  { label: "Pending Reviews", image: "/menu/review.svg", href: "/reviews" },
+  { label: "Orders", image: "/menu/shop.svg", href: "/buyer/orders" },
+  { label: "Notifications", image: "/menu/mail.svg", href: "/buyer/notifications" },
+  { label: "Wishlist", image: "/menu/wishlist.svg", href: "/buyer/wishlist" },
+  { label: "Pending Reviews", image: "/menu/review.svg", href: "/buyer/review" },
 ];
 
 interface ProfileLayoutProps {
@@ -64,8 +64,8 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ children }) => {
                   <Link
                     href={item.href}
                     key={index}
-                    className={`flex items-center px-4 transform transition-colors duration-300 hover:bg-orange hover:text-black py-2 rounded-[3px] gap-6 w-full group ${
-                      isActive(item.href) ? "bg-orange text-primary" : ""
+                    className={`flex items-center px-4 transform transition-colors duration-300 hover:bg-orange hover:text-primary py-2 rounded-[3px] gap-6 w-full group ${
+                      isActive(item.href) ? "bg-orange dark:bg-darkyellow text-primary dark:text-white" : ""
                     }`}
                     onClick={() => setIsSliderOpen(false)}
                   >
@@ -91,8 +91,10 @@ const ProfileLayout: React.FC<ProfileLayoutProps> = ({ children }) => {
             </div>
           </div>
 
-          <div className="pt-4 absolute w-full bottom-9 px-4 pl-[24px] pr-[18px]">
-            <Button text="LOGOUT" />
+          <div className="flex justify-center"> 
+            <div className="pt-4 absolute w-[200px]  bottom-9 px-4 pl-[24px] pr-[18px]">
+              <Button text="LOGOUT" />
+            </div>
           </div>
         </div>
 
