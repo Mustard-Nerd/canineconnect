@@ -6,28 +6,28 @@ import { Footer3 } from "@/components/layout/footer3";
 
 const items = [
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "Foldable pet dog house",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "Foldable pet dog house",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "Foldable pet dog house",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "Foldable pet dog house",

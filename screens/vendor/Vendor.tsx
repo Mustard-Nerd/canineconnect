@@ -8,7 +8,6 @@ import Button2 from "@/components/button/button2";
 import DogInfo from "@/components/dogInfo/doginfo";
 
 const VendorScreen = () => {
-  
   return (
     <>
       <div className="min-h-screen dark:bg-[#121212]">
@@ -24,7 +23,7 @@ const VendorScreen = () => {
           </div>
           <div className="col-span-1 ">
             <Image
-              src="/vendor.png"
+              src="/vendor.webp"
               alt="Aton logo"
               className="h-full w-full "
               width={1000}

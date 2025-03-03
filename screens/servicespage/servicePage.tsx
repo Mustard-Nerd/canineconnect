@@ -12,56 +12,56 @@ import ServiceHero from "./serviceHero";
 
 const items = [
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
@@ -102,28 +102,28 @@ export default function ServiceScreen() {
           </div>
           <div className=" grid grid-cols-2 gap-[10px]">
             <Image
-              src="/womanxdog.png"
+              src="/womanxdog.webp"
               alt="doginfo"
               className="rounded-[10px]"
               width={285}
               height={330}
             />
             <Image
-              src="/guyxdog.png"
+              src="/guyxdog.webp"
               alt="doginfo"
               className="rounded-[10px]"
               width={285}
               height={330}
             />
             <Image
-              src="/guyxdog.png"
+              src="/guyxdog.webp"
               alt="doginfo"
               className="rounded-[10px]"
               width={285}
               height={330}
             />
             <Image
-              src="/womanxdog.png"
+              src="/womanxdog.webp"
               alt="doginfo"
               className="rounded-[10px]"
               width={285}

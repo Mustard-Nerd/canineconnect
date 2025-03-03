@@ -7,35 +7,35 @@ import ProductSlider from "./ProductCarousel";
 
 const items = [
   {
-    src: "/bulldog.png",
+    src: "/bulldog.webp",
     alt: "product 1",
   },
   {
-    src: "/access2.png",
+    src: "/access2.webp",
     alt: "product 2",
   },
   {
-    src: "/bulldog.png",
+    src: "/bulldog.webp",
     alt: "product 1",
   },
   {
-    src: "/access2.png",
+    src: "/access2.webp",
     alt: "product 2",
   },
   {
-    src: "/access4.png",
+    src: "/access4.webp",
     alt: "product 1",
   },
   {
-    src: "/bulldog.png",
+    src: "/bulldog.webp",
     alt: "product 2",
   },
   {
-    src: "/access4.png",
+    src: "/access4.webp",
     alt: "product 1",
   },
   {
-    src: "/access3.png",
+    src: "/access3.webp",
     alt: "product 2",
   },
 ];
@@ -57,7 +57,7 @@ const DogScreen = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 h-full gap-[24px] lg:gap-[30px]">
           <div className="col-span-1">
             <Image
-              src={"/bulldog.png"}
+              src={"/bulldog.webp"}
               width={200}
               height={200}
               alt="Accessories"
@@ -281,7 +281,7 @@ const DogScreen = () => {
               height={33}
             />
             <Image
-              src={"/twitter.png"}
+              src={"/twitter.webp"}
               alt={"insta"}
               className="rounded-[10px]"
               width={33}

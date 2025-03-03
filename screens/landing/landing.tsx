@@ -11,56 +11,56 @@ import { Footer2 } from "@/components/layout/footer2";
 
 const items = [
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/bag.png",
+    src: "/bag.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/dog.png",
+    src: "/dog.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/bag.png",
+    src: "/bag.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/carosel1.png",
+    src: "/carosel1.webp",
     alt: "product 1",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
     price: "₦ 35,000",
   },
   {
-    src: "/german.png",
+    src: "/german.webp",
     alt: "product 2",
     title: "Harness walk kit",
     description: "A leather dog harness and leash kit",
@@ -87,7 +87,7 @@ export default function Landing() {
           description="Here at canine connect we deal in all kind of dog and breeds. We offer a platform where you can easily check through for your next best friend."
           buttonText="Shop now"
           buttonLink="/shop"
-          imageSrc="/dog1.png"
+          imageSrc="/dog1.webp"
           imageAlt="dog"
           row="sm:flex-row"
         />
@@ -97,7 +97,7 @@ export default function Landing() {
           description="Here at canine connect we deal in all kind of dog and breeds . we offer a platform where you can easily check through for your next bestfriend.  "
           buttonText="Shop now"
           buttonLink="/shop"
-          imageSrc="/dog2.png"
+          imageSrc="/dog2.webp"
           imageAlt="dog"
           row="sm:flex-row-reverse"
         />
@@ -110,7 +110,7 @@ export default function Landing() {
           <div className=" flex flex-col sm:flex-row text-white justify-between items-center gap-10 mt-9">
             <div className="relative rounded-[10px] ">
               <Image
-                src="/dogfood.png"
+                src="/dogfood.webp"
                 alt="dogfood"
                 className="rounded-[10px] "
                 width={600}
@@ -129,7 +129,7 @@ export default function Landing() {
 
             <div className="relative rounded-[10px]">
               <Image
-                src="/dogfeed.png"
+                src="/dogfeed.webp"
                 alt="dogfood"
                 className="rounded-[10px] "
                 width={600}
@@ -153,7 +153,7 @@ export default function Landing() {
           description="Here at canine connect we deal in all kind of dog and breeds . we offer a platform where you can easily check through for your next bestfriend."
           buttonText="Connect"
           buttonLink="/shop"
-          imageSrc="/girlxdog.png"
+          imageSrc="/girlxdog.webp"
           imageAlt="dog"
           row="sm:flex-row"
         />

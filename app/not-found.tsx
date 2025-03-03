@@ -10,7 +10,7 @@ const Custom404 = () => {
       <div className="flex lg:flex-row flex-col items-center lg:justify-between lg:items-start w-full gap-10 mb-[125px]">
         <div className=" lg:w-[640px] pt-3 lg:pt-[50px] px-[5px] lg:px-[45px]">
           <h1 className="xl:text-[60px] text-[40px] font-[850px] mb-5 lg:mb-10">
-            Oops! We&apos;ve dug  up a hole!
+            Oops! We&apos;ve dug up a hole!
           </h1>
           <p className="font-quicksand text-center text-[20px] xl:text-[30px]">
             Looks like this page has gone missing, but don&apos;t worry,
@@ -18,7 +18,10 @@ const Custom404 = () => {
           </p>
 
           <div className=" mt-10  lg:mt-[90px] flex justify-center items-center">
-            <Link href="/" className="dark:bg-[#001C66] bg-[#0046FF] text-white px-8 lg:px-[50px] font-quicksand rounded-[8px] py-4 lg:py-[26px] text-center text-[14px] lg:text-[24px] font-normal">
+            <Link
+              href="/"
+              className="dark:bg-[#001C66] bg-[#0046FF] text-white px-8 lg:px-[50px] font-quicksand rounded-[8px] py-4 lg:py-[26px] text-center text-[14px] lg:text-[24px] font-normal"
+            >
               Sniff out more goodies
             </Link>
           </div>
@@ -46,7 +49,7 @@ const Custom404 = () => {
       <div className="grid  grid-cols-1 lg:grid-cols-2 w-full h-full  mb-20 lg:mb-[250px]">
         <div className="col-span-1 py-16 lg:py-[154px] flex flex-col justify-center items-center gap-3 bg-[#B6DDFF] dark:bg-[#005EB2] px-4 lg:px-[80px]">
           <Image
-            src={"/404rev1.png"}
+            src={"/404rev1.webp"}
             width={140}
             height={140}
             alt=""
@@ -63,7 +66,7 @@ const Custom404 = () => {
         </div>
         <div className="col-span-1 py-16 lg:py-[154px] flex flex-col justify-center items-center gap-3 bg-[#DBEEFF] dark:bg-[#003666] px-4 sm:px-10 2xl:px-[80px] ">
           <Image
-            src={"/404rev2.png"}
+            src={"/404rev2.webp"}
             width={140}
             height={140}
             alt=""

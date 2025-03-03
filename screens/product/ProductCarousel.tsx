@@ -29,10 +29,8 @@ type ReusableCarouselProps = {
 const ProductSlider: React.FC<ReusableCarouselProps> = ({ items }) => {
   return (
     <div className="lg:mt-[24px] w-full flex justify-between items-center relative overflow-x-hidden gap-1">
-      <div>
-        <div className="h-12 w-12 hidden rounded-full bg-primary lg:flex justify-center items-center cursor-pointer custom-nextt z-40">
-          <MdOutlineArrowBackIos className="h-6 w-6 text-white" />
-        </div>
+      <div className="h-12 w-12 hidden rounded-full bg-primary lg:flex justify-center items-center cursor-pointer custom-nextt z-40">
+        <MdOutlineArrowBackIos className="h-6 w-6 text-white" />
       </div>
 
       <Swiper
@@ -46,24 +44,10 @@ const ProductSlider: React.FC<ReusableCarouselProps> = ({ items }) => {
             slidesPerView: 2,
           },
           1024: {
-            slidesPerView:
-              items.length === 1
-                ? 1
-                : items.length === 2
-                ? 2
-                : items.length === 3
-                ? 3
-                : 4,
+            slidesPerView: 4,
           },
           1200: {
-            slidesPerView:
-              items.length === 1
-                ? 1
-                : items.length === 2
-                ? 2
-                : items.length === 3
-                ? 3
-                : 4,
+            slidesPerView: 4,
           },
         }}
         autoplay={{
@@ -72,8 +56,8 @@ const ProductSlider: React.FC<ReusableCarouselProps> = ({ items }) => {
         }}
       >
         {items.map((item, index) => (
-          <SwiperSlide>
-            <div key={index} className="font-quicksand flex justify-center items-center">
+          <SwiperSlide key={index}>
+            <div className="font-quicksand flex justify-center items-center">
               <Image
                 src={item.src}
                 alt={item.alt}

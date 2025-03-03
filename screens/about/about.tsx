@@ -42,7 +42,7 @@ function AboutScreen() {
           </div>
         </div>
         <div className="w-1/2">
-          <Image src="/about.png" alt="Aton logo" width={1000} height={1000} />
+          <Image src="/about.webp" alt="Aton logo" width={1000} height={1000} />
         </div>
       </div>
 

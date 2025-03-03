@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import "react-multi-carousel/lib/styles.css";
 import Image from "next/image";
@@ -24,49 +24,49 @@ import { useState } from "react";
 import { IoClose, IoFilterOutline } from "react-icons/io5";
 import { useMyContext } from "@/contex/MyContex";
 import { IoIosArrowDown } from "react-icons/io";
-import { HiOutlineAdjustmentsHorizontal, HiOutlineAdjustmentsVertical } from "react-icons/hi2";
-
-
-
+import {
+  HiOutlineAdjustmentsHorizontal,
+  HiOutlineAdjustmentsVertical,
+} from "react-icons/hi2";
 
 const items = [
   {
-    src: "/shop/group1.png",
+    src: "/shop/group1.webp",
     alt: "product 1",
     title: "Healthy puppies",
   },
   {
-    src: "/shop/group2.png",
+    src: "/shop/group2.webp",
     alt: "product 2",
     title: "Dry feed",
   },
   {
-    src: "/shop/group3.png",
+    src: "/shop/group3.webp",
     alt: "product 1",
     title: "Wet feed",
   },
   {
-    src: "/shop/group4.png",
+    src: "/shop/group4.webp",
     alt: "product 2",
     title: "Raw feed",
   },
   {
-    src: "/shop/group4.png",
+    src: "/shop/group4.webp",
     alt: "product 1",
     title: "Raw feed",
   },
   {
-    src: "/shop/group3.png",
+    src: "/shop/group3.webp",
     alt: "product 2",
     title: "Wet feed",
   },
   {
-    src: "/shop/group2.png",
+    src: "/shop/group2.webp",
     alt: "product 3",
     title: "Dry feed",
   },
   {
-    src: "/shop/group1.png",
+    src: "/shop/group1.webp",
     alt: "product 2",
     title: "Healthy puppies",
   },
@@ -74,256 +74,276 @@ const items = [
 
 const items1 = [
   {
-    src: "/shop/dog1.png",
+    src: "/shop/dog1.webp",
     alt: "product 1",
     title: "Tibetian Mastiff",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog2.png",
+    src: "/shop/dog2.webp",
     alt: "product 2",
     title: "Lassa Apso",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog3.png",
+    src: "/shop/dog3.webp",
     alt: "Pitbull 1",
     title: "Pitbull",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog4.png",
+    src: "/shop/dog4.webp",
     alt: "Poodle 2",
     title: "Poodle",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog4.png",
+    src: "/shop/dog4.webp",
     alt: "Poodle 1",
     title: "Poodle",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog3.png",
+    src: "/shop/dog3.webp",
     alt: "Pitbull 2",
     title: "Pitbull",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog2.png",
+    src: "/shop/dog2.webp",
     alt: "product 3",
     title: "Lassa Apso",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/dog1.png",
+    src: "/shop/dog1.webp",
     alt: "Tibetian Mastiff 2",
     title: "Tibetian Mastiff",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
 ];
 
 const items2 = [
   {
-    src: "/shop/feed1.png",
+    src: "/shop/feed1.webp",
     alt: "product 1",
     title: "Vitapet- Crunchy dog food",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed2.png",
+    src: "/shop/feed2.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 1",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 2",
     title: "Booster Dry food for all ages ",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 1",
     title: "Booster Dry food for all ages ",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed2.png",
+    src: "/shop/feed2.webp",
     alt: "product 3",
     title: "Booster Dry Food for Adult dogs (15kg)",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/feed1.png",
+    src: "/shop/feed1.webp",
     alt: "product 2",
     title: "Vitapet- Crunchy dog food",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
 ];
 
 const items3 = [
   {
-    src: "/shop/toy1.png",
+    src: "/shop/toy1.webp",
     alt: "product 1",
     title: "Multifunctional shower head for bathing your dog",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy2.png",
+    src: "/shop/toy2.webp",
     alt: "product 2",
     title: "5cm Rubber Ball Chew Treat",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy3.png",
+    src: "/shop/toy3.webp",
     alt: "product 1",
     title: "Foldable pet dog house",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy4.png",
+    src: "/shop/toy4.webp",
     alt: "product 2",
     title: "Dog Cage with Washable Storage Bag",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy4.png",
+    src: "/shop/toy4.webp",
     alt: "product 1",
     title: "Dog Cage with Washable Storage Bag",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy3.png",
+    src: "/shop/toy3.webp",
     alt: "product 2",
     title: "Foldable pet dog house",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy2.png",
+    src: "/shop/toy2.webp",
     alt: "product 3",
     title: "5cm Rubber Ball Chew Treat",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
   {
-    src: "/shop/toy1.png",
+    src: "/shop/toy1.webp",
     alt: "product 2",
     title: "Multifunctional shower head for bathing your dog",
-    price: "₦ 35,000"
+    price: "₦ 35,000",
   },
 ];
 
 const Doglist = [
   {
     title: "WORKING DOGS",
-    href:"/dog",
-    list: ["Akita", "Great Dane", "Boxer", "Rotweiller", "Bull Mastiff", "Bull Mastiff", "Husky"]
+    href: "/dog",
+    list: [
+      "Akita",
+      "Great Dane",
+      "Boxer",
+      "Rotweiller",
+      "Bull Mastiff",
+      "Bull Mastiff",
+      "Husky",
+    ],
   },
   {
-    title: "HOUND DOGS",  
-    href:"/dog",
-    list: ["Beagle", "Dachshund", "Greyhound", "Whippet"]
+    title: "HOUND DOGS",
+    href: "/dog",
+    list: ["Beagle", "Dachshund", "Greyhound", "Whippet"],
   },
   {
     title: "HERDING DOGS",
-    href:"/dog",
-    list: ["German Shephard", "Corgie", "Collie",]
+    href: "/dog",
+    list: ["German Shephard", "Corgie", "Collie"],
   },
   {
     title: "SPORTING DOGS",
-    href:"/dog",
-    list: ["Labrador retriever", "Golden Retriever", "Cocker Spaniel",]
+    href: "/dog",
+    list: ["Labrador retriever", "Golden Retriever", "Cocker Spaniel"],
   },
   {
     title: "TOY DOGS",
-    href:"/dog",
-    list: ["Pomeranian", "Chihuahua", "Maltese",]
+    href: "/dog",
+    list: ["Pomeranian", "Chihuahua", "Maltese"],
   },
   {
     title: "NON-SPORTING DOGS",
-    href:"/dog",
-    list: ["Poodle", "Chow Chow", "Dalmatian", "French Bulldog",]
+    href: "/dog",
+    list: ["Poodle", "Chow Chow", "Dalmatian", "French Bulldog"],
   },
-]
+];
 
 const Feedlist = [
   {
-    title: "DRY", 
-    href:"/feeds",
-    list: ["Traditionally extruded", "Baked", "Raw Coated",]
+    title: "DRY",
+    href: "/feeds",
+    list: ["Traditionally extruded", "Baked", "Raw Coated"],
   },
   {
-    title: "WET",  
-    href:"/feeds",
-    list: ["Canned", "Dog Food Pouches", "Tetra Packs",]
+    title: "WET",
+    href: "/feeds",
+    list: ["Canned", "Dog Food Pouches", "Tetra Packs"],
   },
   {
     title: "DEHYDRATED",
-    href:"/feeds",
-    list: ["Ready-to-eat", "Just add water"]
+    href: "/feeds",
+    list: ["Ready-to-eat", "Just add water"],
   },
   {
     title: "OTHERS",
-    href:"/feeds",
-    list: ["Freeze-dried", "Raw"]
+    href: "/feeds",
+    list: ["Freeze-dried", "Raw"],
   },
   {
     title: "SHOP BY AGE",
-    href:"/feeds",
-    list: ["Puppy", "Young Dogs", "Adult Dogs","Senior Dogs"]
+    href: "/feeds",
+    list: ["Puppy", "Young Dogs", "Adult Dogs", "Senior Dogs"],
   },
   {
     title: "TOP BRAND",
-    href:"/feeds",
-    list: ["Spectrum", "reflex", "Nature’s Protection", "Araton", "Proline",]
+    href: "/feeds",
+    list: ["Spectrum", "reflex", "Nature’s Protection", "Araton", "Proline"],
   },
-]
+];
 
 const Acessorieslist = [
   {
     title: "LIVELIHOOD",
-    href:"/accessories",
-    list: ["Bowls", "Colars", "Leashes", "Harnesses", "Dog Ramps",]
+    href: "/accessories",
+    list: ["Bowls", "Colars", "Leashes", "Harnesses", "Dog Ramps"],
   },
   {
     title: "GROOMING",
-    href:"/accessories",
-    list: ["Clippers and Scissors", "Soaps and Shampoo", "Towels", "Shower Heads", "Bath tubs"]
+    href: "/accessories",
+    list: [
+      "Clippers and Scissors",
+      "Soaps and Shampoo",
+      "Towels",
+      "Shower Heads",
+      "Bath tubs",
+    ],
   },
   {
     title: "TRAVEL & CARS",
-    href:"/accessories",
-    list: ["Carriers", "Dryers", "Strollers",]
+    href: "/accessories",
+    list: ["Carriers", "Dryers", "Strollers"],
   },
   {
     title: "KENNEL",
-    href:"/accessories",
-    list: ["Crates", "Crate bedding", "Crate set", "Beds and beddings", "Cushions", "Barrier Rugs"]
+    href: "/accessories",
+    list: [
+      "Crates",
+      "Crate bedding",
+      "Crate set",
+      "Beds and beddings",
+      "Cushions",
+      "Barrier Rugs",
+    ],
   },
   {
     title: "TOYS",
-    href:"/accessories",
-    list: ["Interactive toys", "Chew toys", "Cooling Toys", "Swimming toys"]
+    href: "/accessories",
+    list: ["Interactive toys", "Chew toys", "Cooling Toys", "Swimming toys"],
   },
   {
     title: "CLOTHING",
-    href:"/accessories", 
-    list: ["Jackets", "Bandannas", "Costumes", "Life Vests",]
+    href: "/accessories",
+    list: ["Jackets", "Bandannas", "Costumes", "Life Vests"],
   },
-]
-
+];
 
 type Category = {
   title: string;
@@ -332,11 +352,8 @@ type Category = {
 };
 
 export default function ShopScreen() {
-
-  const [isModalVisible, setIsModalVisible] = useState(false)
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentList, setCurrentList] = useState<Category[] | null>(null);
-
-  
 
   const handleMouseEnter = (list: Category[]) => {
     setCurrentList(list);
@@ -345,7 +362,7 @@ export default function ShopScreen() {
 
   const { setData } = useMyContext();
 
-  const handleClick = (category:any) => {
+  const handleClick = (category: any) => {
     setData(category);
   };
 
@@ -354,50 +371,64 @@ export default function ShopScreen() {
       <div className="px-4  sm:px-[30px] xl:px-[150px] 2xl:px-[200px] py-8 w-full flex flex-col">
         <div className=" grid grid-cols-4 gap-7 font-quicksand 2xl:text-[20px] text-[16px] font-normal">
           <div className="hidden lg:flex flex-col gap-7  ">
-            <div 
-              className="flex flex-col justify-center px-4 py-6 sm:px-4 sm:py-6  h-[320px]   gap-3 dark:bg-darkbg bg-primaryD rounded-lg cursor-pointer"
-            >
-              <div 
+            <div className="flex flex-col justify-center px-4 py-6 sm:px-4 sm:py-6  h-[320px]   gap-3 dark:bg-darkbg bg-primaryD rounded-lg cursor-pointer">
+              <div
                 className="flex items-center gap-6 w-full group"
                 onMouseEnter={() => handleMouseEnter(Doglist)}
               >
                 <div className="flex items-center gap-4 flex-grow">
-                  <Image src="/shop/dog.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <Image
+                    src="/shop/dog.svg"
+                    alt="dog"
+                    className="2xl:w-[60px] w-[40px]"
+                    width={60}
+                    height={60}
+                  />
                   <div>Dogs</div>
                 </div>
                 <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
 
-              <div 
+              <div
                 className="flex items-center gap-6 group"
                 onMouseEnter={() => handleMouseEnter(Feedlist)}
               >
                 <div className="flex items-center gap-4 flex-grow">
-                  <Image src="/shop/feed.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <Image
+                    src="/shop/feed.svg"
+                    alt="dog"
+                    className="2xl:w-[60px] w-[40px]"
+                    width={60}
+                    height={60}
+                  />
                   <div>Dog Feed</div>
                 </div>
                 <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
 
-              <div 
+              <div
                 className="flex items-center gap-6 group"
                 onMouseEnter={() => handleMouseEnter(Acessorieslist)}
               >
                 <div className="flex items-center gap-4 flex-grow">
-                  <Image src="/shop/bone.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                  <Image
+                    src="/shop/bone.svg"
+                    alt="dog"
+                    className="2xl:w-[60px] w-[40px]"
+                    width={60}
+                    height={60}
+                  />
                   <div>Accessories</div>
                 </div>
                 <IoIosArrowDown className="transition-transform duration-300 ease-in-out transform group-hover:-rotate-90  w-4 h-4 cursor-pointer flex justify-self-end" />
               </div>
             </div>
 
-            
             <div className="flex items-center justify-center px-4 py-6 sm:px-6 sm:py-8  h-full   dark:bg-darkbg bg-primaryD rounded-lg">
               FOR PROMOTIONS
             </div>
           </div>
 
-          
           <div className="relative w-full  z-10  col-span-4 lg:col-span-2 h-full  ">
             <div className=" w-full flex  flex-col  h-full  gap-7 lg:w-auto">
               <SearchInput />
@@ -440,45 +471,60 @@ export default function ShopScreen() {
                     />
                   </SwiperSlide>
                 </Swiper>
-                
               </div>
             </div>
             {isModalVisible && currentList && (
               <div className="absolute font-quicksand inset-0 z-30 w-full h-full p-4 bg-white rounded-[6px] shadow-lg dark:bg-primary overflow-y-auto">
                 <div
-                    onClick={() => setIsModalVisible(false)}
-                    className=" pb-1 flex justify-end w-full"
-                  >
-                    <IoClose className=" w-4 h-4 cursor-pointer" />
+                  onClick={() => setIsModalVisible(false)}
+                  className=" pb-1 flex justify-end w-full"
+                >
+                  <IoClose className=" w-4 h-4 cursor-pointer" />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 ">
                   {currentList.map((category, index) => (
-                      <div key={index}>
-                        <Link href={category.href} onClick={() => handleClick(category)} className="font-bold text-[18px] 2xl:text-[24px] underline mb-2">{category.title}</Link>
-                        <ul className="list-disc list-inside space-y-1 text-[14px] 2xl:text-[16px]">
-                          {category.list.map((item, itemIndex) => (
-                            <li key={itemIndex} className="cursor-pointer">
-                              {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                    <div key={index}>
+                      <Link
+                        href={category.href}
+                        onClick={() => handleClick(category)}
+                        className="font-bold text-[18px] 2xl:text-[24px] underline mb-2"
+                      >
+                        {category.title}
+                      </Link>
+                      <ul className="list-disc list-inside space-y-1 text-[14px] 2xl:text-[16px]">
+                        {category.list.map((item, itemIndex) => (
+                          <li key={itemIndex} className="cursor-pointer">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
           </div>
 
-          
-
           <div className="  hidden lg:flex flex-col gap-7 ">
             <div className="flex flex-col justify-center gap-3 px-4 py-6 sm:px-6 sm:py-8  h-[320px]   dark:bg-darkbg bg-primaryD rounded-lg">
               <div className="flex items-center gap-6">
-                <Image src="/shop/vendor.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                <Image
+                  src="/shop/vendor.svg"
+                  alt="dog"
+                  className="2xl:w-[60px] w-[40px]"
+                  width={60}
+                  height={60}
+                />
                 <div>Become a Vendor</div>
               </div>
               <div className="flex items-center gap-6">
-                <Image src="/shop/message.svg" alt="dog" className="2xl:w-[60px] w-[40px]" width={60} height={60} />
+                <Image
+                  src="/shop/message.svg"
+                  alt="dog"
+                  className="2xl:w-[60px] w-[40px]"
+                  width={60}
+                  height={60}
+                />
                 <div>Customer Service</div>
               </div>
             </div>
@@ -486,15 +532,11 @@ export default function ShopScreen() {
               <div>FOR PROMOTIONS</div>
             </div>
           </div>
-
         </div>
 
         <div className=" mt-10 lg:mt-20 grid grid-cols-4 w-full gap-x-5 gap-y-12 border border-secondary p-4 lg:px-5 lg:py-8 rounded-[10px]">
           {items.map((item, index) => (
-            <div
-              key={index}
-              className="font-quicksand w-full group"
-            >
+            <div key={index} className="font-quicksand w-full group">
               <div className="overflow-hidden rounded-[15px]">
                 <Image
                   src={item.src}
@@ -511,7 +553,12 @@ export default function ShopScreen() {
                   </div>
                 </div>
                 <div className=" group-hover:flex hidden text-white font-semibold duration-700 transition-shadow ease-in-out">
-                  <Link href="/shop"  className="max-w-[170px] py-1 lg:py-2 px-3 text-[10px] lg:text-[16px] bg-secondary text-center rounded-xl" >Select Options</Link>
+                  <Link
+                    href="/shop"
+                    className="max-w-[170px] py-1 lg:py-2 px-3 text-[10px] lg:text-[16px] bg-secondary text-center rounded-xl"
+                  >
+                    Select Options
+                  </Link>
                 </div>
               </div>
             </div>
@@ -519,21 +566,29 @@ export default function ShopScreen() {
         </div>
 
         <div className=" mt-10 lg:mt-20">
-          <ShoppingList items={items1} title="Top Selling Breeds" border="border" />
+          <ShoppingList
+            items={items1}
+            title="Top Selling Breeds"
+            border="border"
+          />
         </div>
 
         <div className=" my-10 lg:my-20 ">
-          <ShoppingList items={items2} border="border" title="Highly Nutritious Feed" />
+          <ShoppingList
+            items={items2}
+            border="border"
+            title="Highly Nutritious Feed"
+          />
         </div>
 
         <div className=" mb-10 lg:mb-20">
-          <ShoppingList items={items3} border="border" title="Exotic toys, grooming products, and lots more. . ." />
+          <ShoppingList
+            items={items3}
+            border="border"
+            title="Exotic toys, grooming products, and lots more. . ."
+          />
         </div>
-
       </div>
-
-
-      
 
       <Footer3 />
     </div>

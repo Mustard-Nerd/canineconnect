@@ -14,49 +14,49 @@ import { MdArrowRight } from "react-icons/md";
 
 const items1 = [
   {
-    src: "/shop/feed1.png",
+    src: "/shop/feed1.webp",
     alt: "product 1",
     title: "Vitapet- Crunchy dog food",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed2.png",
+    src: "/shop/feed2.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 1",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 2",
     title: "Booster Dry food for all ages ",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 1",
     title: "Booster Dry food for all ages ",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed2.png",
+    src: "/shop/feed2.webp",
     alt: "product 3",
     title: "Booster Dry Food for Adult dogs (15kg)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed1.png",
+    src: "/shop/feed1.webp",
     alt: "product 2",
     title: "Vitapet- Crunchy dog food",
     price: "₦ 35,000"
@@ -65,37 +65,37 @@ const items1 = [
 
 const items = [
   {
-    src: "/shop/feed1.png",
+    src: "/shop/feed1.webp",
     alt: "product 1",
     title: "Vitapet- Crunchy dog food",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed2.png",
+    src: "/shop/feed2.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 1",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 2",
     title: "Booster Dry food for all ages ",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed4.png",
+    src: "/shop/feed4.webp",
     alt: "product 1",
     title: "Booster Dry food for all ages ",
     price: "₦ 35,000"
   },
   {
-    src: "/shop/feed3.png",
+    src: "/shop/feed3.webp",
     alt: "product 2",
     title: "Meaty chunks in Jelly Chicken (24 cans)",
     price: "₦ 35,000"
