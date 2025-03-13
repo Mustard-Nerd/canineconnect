@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout";
 import { Footer } from "@/components/layout/footer";
 import { Providers } from "./themeProvider";
 import { MyProvider } from "@/contex/MyContex";
+import ReduxProvider from "./ReduxProvider"; // Import the new ReduxProvider
 
 export const metadata: Metadata = {
   title: "Canine-Connect",
@@ -33,19 +34,23 @@ export const viewport: Viewport = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark"   suppressHydrationWarning>
-      <body  className={local.className}>
-        <Providers>
-          <MyProvider>
-            <nav className='sticky top-0 z-40'>
-              <Navbar />
-            </nav>
-            <div className=" z-10">{children}</div>
-            <footer>
-              <Footer />
-            </footer>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={local.className}>
+        <ReduxProvider>
+          {" "}
+          {/* Use the new ReduxProvider */}
+          <Providers>
+            <MyProvider>
+              <nav className="sticky top-0 z-40">
+                <Navbar />
+              </nav>
+              <div className=" z-10">{children}</div>
+              <footer>
+                <Footer />
+              </footer>
             </MyProvider>
-        </Providers>
+          </Providers>
+        </ReduxProvider>
       </body>
     </html>
   );
