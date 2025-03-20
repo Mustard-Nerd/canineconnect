@@ -33,6 +33,8 @@ interface User {
   name: string;
   email: string;
   username: string;
+  phone: number;
+  role: string;
 }
 
 interface AuthState {
@@ -77,7 +79,13 @@ export const loginUser = createAsyncThunk<
 
 export const registerUser = createAsyncThunk<
   User,
-  { name: string; email: string; password: string },
+  {
+    username: string;
+    email: string;
+    password: string;
+    phone: string;
+    // role: string;
+  },
   { rejectValue: string }
 >("auth/registerUser", async (userData, { rejectWithValue }) => {
   try {

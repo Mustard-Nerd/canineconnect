@@ -148,14 +148,16 @@ const SignUp = () => {
     try {
       await dispatch(
         registerUser({
-          name: formData.username,
+          username: formData.username,
           email: formData.email,
           password: formData.password,
+          phone: formData.phone,
+          // role: "",
         })
       );
 
       // Handle success
-      router.push("/dashboard"); // Redirect to dashboard
+      router.push("/"); // Redirect to home
       setFormData({
         username: "",
         email: "",
