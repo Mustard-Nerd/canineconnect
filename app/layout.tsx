@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout";
 import { Footer } from "@/components/layout/footer";
 import { Providers } from "./themeProvider";
 import { MyProvider } from "@/contex/MyContex";
-import ReduxProvider from "./ReduxProvider"; // Import the new ReduxProvider
+import ReduxProvider from "./ReduxProvider";
 
 export const metadata: Metadata = {
   title: "Canine-Connect",
