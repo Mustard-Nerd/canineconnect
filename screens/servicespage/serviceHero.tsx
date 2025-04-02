@@ -13,7 +13,7 @@ export default function ServiceHero() {
       >
         <div className="absolute left-0 top-[30%] sm:pl-[30px] xl:pl-[150px] 2xl:pl-[200px]  ">
           <div className="xl:w-[850px] w-[600px]  font-benz font-bold text-[36px]  xl:text-[55px]">
-            Get The Best Service Around For Your Bestfriend
+            Get The Best Service Around For Your Best friend
           </div>
 
           <div className="relative w-full max-w-sm mt-[60px]  font-quicksand">

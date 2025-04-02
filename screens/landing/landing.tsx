@@ -8,6 +8,8 @@ import Button2 from "@/components/button/button2";
 import DogInfo from "@/components/dogInfo/doginfo";
 import Button from "@/components/button/button";
 import { Footer2 } from "@/components/layout/footer2";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const items = [
   {
@@ -69,6 +71,21 @@ const items = [
 ];
 
 export default function Landing() {
+  // const [newProducts, setNewProducts] = useState([]);
+
+  // useEffect(() => {
+  //   const fetchProducts = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${process.env.NEXT_PUBLIC_API_URL}/api/v1/products/new-products/products`
+  //       );
+  //       setNewProducts(response.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   fetchProducts();
+  // }, []);
   return (
     <div>
       <Hero />

@@ -10,36 +10,33 @@ import { Logo2 } from "../Logo/Logo2";
 import Image from "next/image";
 import Button2 from "../button/button2";
 
-
-
 export function Footer2() {
   const [modal, setModal] = useState(false);
   const [isSliderOpen, setIsSliderOpen] = useState(false);
-
 
   const handleModalClose = () => {
     setModal(false);
   };
 
   // const router = useRouter()
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const isActive = (href: any) => pathname === href;
 
   const nav = [
     {
       name: "Home",
-      href: "#"
+      href: "#",
     },
     {
       name: "About us",
-      href: "#"
+      href: "#",
     },
     {
       name: "Blog",
-      href: "#"
-    }
-  ]
+      href: "#",
+    },
+  ];
 
   return (
     <div className="relative font-quicksand overflow-hidden w-full py-10 lg:py-20 sm:px-[30px] xl:px-[150px] 2xl:px-[200px] z-10">
@@ -60,9 +57,14 @@ export function Footer2() {
         />
         <div className="sm:hidden absolute inset-0 bg-gradient-to-r from-[#242325] to-[#87838B] opacity-50 z-0"></div>
         <div className=" absolute inset-0 ml-8 lg:ml-28 top-10 lg:top-16 xl:top-24 text-white">
-          <div className=" font-benz text-[20px] sm:text-[30px] font-bold pb-4">Download canine connect</div>
+          <div className=" font-benz text-[20px] sm:text-[30px] font-bold pb-4">
+            Download canine connect
+          </div>
           <div className=" font-quicksand font-normal lg:text-[15px] pr-3 xs:text-[13px] text-[10px] max-w-[500px]">
-            By signing up, you consent to receiving marketing by email and/or SMS and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails or by replying STOP to any of our SMS.
+            By signing up, you consent to receiving marketing by email and/or
+            SMS and acknowledge you have read our privacy policy. Unsubscribe
+            anytime at the bottom of our emails or by replying STOP to any of
+            our SMS.
           </div>
           <div className="mt-6 flex gap-3 items-center ">
             <Image
@@ -81,7 +83,7 @@ export function Footer2() {
             />
           </div>
         </div>
-      </div>  
+      </div>
 
       <div className="px-4 py-9">
         <div className=" flex flex-col sm:items-center">
@@ -89,7 +91,8 @@ export function Footer2() {
             Stay Ahead of the Pack;
           </div>
           <div className=" font-quicksand sm:py-4 font-normal lg:text-[15px] text-[13px] ">
-            Sign up to our newsletter to get updates on exclusive deals, tips, and updates for dog Lovers!
+            Sign up to our newsletter to get updates on exclusive deals, tips,
+            and updates for dog Lovers!
           </div>
           <div className=" max-w-[500px] w-full py-3">
             <input
@@ -98,8 +101,10 @@ export function Footer2() {
               className="border-[2px] rounded-[15px] bg-white border-[#121212] dark:border-[#FFFFFF] dark:bg-primary h-[60px] w-full font-bold px-5"
             />
           </div>
-          <div className=" font-quicksand py-4 max-w-[670px] sm:text-center font-normal lg:text-[15px] text-[13px] " >
-            By signing up, you consent to receiving marketing emails and acknowledge you have read our privacy policy. Unsubscribe anytime at the bottom of our emails.
+          <div className=" font-quicksand py-4 max-w-[670px] sm:text-center font-normal lg:text-[15px] text-[13px] ">
+            By signing up, you consent to receiving marketing emails and
+            acknowledge you have read our privacy policy. Unsubscribe anytime at
+            the bottom of our emails.
           </div>
           <div className="mt-5 sm:mt-10 lg:w-[180px]  justify-self-center flex justify-center">
             <Button2 text="Sign Up" href="/auth/sign-up" />
@@ -108,16 +113,31 @@ export function Footer2() {
 
         <div className=" flex flex-col sm:flex-row justify-between gap-10 sm:gap-5 items-bottom mt-12">
           <div className="pl-9 pr-3 py-[36px]   w-full border sm:border-0 rounded-[10px] border-secondary sm:rounded-b-[10px] dropshadow3 flex flex-col justify-center ">
-            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">FAQs</div>
-            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">Answers to all your questions.</div>
+            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">
+              FAQs
+            </div>
+            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">
+              Answers to all your questions.
+            </div>
           </div>
           <div className="pl-9 pr-3 py-[36px]   w-full border sm:border-0 rounded-[10px] border-secondary sm:rounded-b-[10px] dropshadow3 flex flex-col justify-center">
-            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">Testimonials</div>
-            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">Users don’t lie, check our revews here.</div>
+            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">
+              Testimonials
+            </div>
+            <div className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">
+              Users don’t lie, check our revews here.
+            </div>
           </div>
           <div className="pl-9 pr-3 py-[36px]   w-full border sm:border-0 rounded-[10px] border-secondary sm:rounded-b-[10px] dropshadow3 ">
-            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">Need help ?</div>
-            <Link href="/contact" className=" font-quicksand font-normal lg:text-[16px] text-[14px] ">Contact us</Link>
+            <div className=" font-benz font-bold text-secondary lg:text-[32px] text-[22px] ">
+              Need help ?
+            </div>
+            <Link
+              href="/contact"
+              className=" font-quicksand font-normal lg:text-[16px] text-[14px] "
+            >
+              Contact us
+            </Link>
           </div>
         </div>
       </div>
@@ -199,8 +219,6 @@ export function Footer2() {
         width={70}
         height={70}
       />
-
-
     </div>
   );
 }

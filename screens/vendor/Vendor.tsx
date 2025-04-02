@@ -119,7 +119,7 @@ const VendorScreen = () => {
           <DogInfo
             title="Sell Dogs and dog related products on canine"
             description="Here at Canine connect we bring together dog lovers and owners who are in need of every dog services and goods around them."
-            imageSrc="/vendor1.png"
+            imageSrc="/vendor1.webp"
             imageAlt="dog"
             row="sm:flex-row-reverse"
             show={false}
@@ -128,7 +128,7 @@ const VendorScreen = () => {
           <DogInfo
             title="Provide dog related services on canine"
             description="Here at Canine connect we bring together dog lovers and owners who are in need of every dog services and goods around them."
-            imageSrc="/vendor2.png"
+            imageSrc="/vendor2.webp"
             imageAlt="dog"
             row="sm:flex-row"
             show={false}

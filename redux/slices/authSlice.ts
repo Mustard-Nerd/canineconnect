@@ -5,8 +5,18 @@ import axios from "axios";
 // Utility functions to safely access localStorage
 const getLocalStorageItem = (key: string): any => {
   if (typeof window !== "undefined") {
-    const item = localStorage.getItem(key);
-    return item ? JSON.parse(item) : null;
+    try {
+      const item = localStorage.getItem(key);
+      // Return the raw string if parsing fails (for non-JSON values)
+      try {
+        return item ? JSON.parse(item) : null;
+      } catch {
+        return item;
+      }
+    } catch (error) {
+      console.error("Error accessing localStorage:", error);
+      return null;
+    }
   }
   return null;
 };

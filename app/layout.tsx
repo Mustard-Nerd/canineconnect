@@ -44,7 +44,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <nav className="sticky top-0 z-40">
                 <Navbar />
               </nav>
-              <div className=" z-10">{children}</div>
+              <main className=" z-10">{children}</main>
               <footer>
                 <Footer />
               </footer>
